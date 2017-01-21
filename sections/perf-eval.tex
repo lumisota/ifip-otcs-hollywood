@@ -1,0 +1,188 @@
+% !TEX root = ../utltcp-paper.tex
+
+\narrative{The analysis introduced three applications: telephony, 
+streaming video, and live video. It showed when our modifications are
+active. This section performs two types of performance evaluation, in the
+real-world, and on a testbed. The real-world tests are designed to show
+that our modifications are triggered in real networks, and the performance
+benefits gained. The testbed gives us a controlled environment, in which
+we can test scenarios not found by the (limited) real-world tests.}
+
+Introduction to section: builds on analysis, showing performance gains.
+Outline real-world vs testbed - why both?
+
+%--------------------------------------------------------------------------------------------------
+\subsection{Real-World}
+\label{sec:perf:realworld}
+
+Intro: hosts in residential network near Glasgow, UK, and in datacenters in
+London, UK, and San Francisco, USA. Locations selected to test two ranges
+of RTTs: intra and intercontinental.
+
+We've chosen to evaluate two applications: voice telephony, and live video
+streaming. The analysis shows that these two applications should benefit
+from TCP Hollywood.
+
+We'll measure the following metrics:
+
+\begin{description}
+  \item[Timely goodput] \hfill \\
+  This is the number of \textit{usable} bytes delivered to the application.
+  A byte is usable if it arrives on time to be played out. We measure this
+  for both TCP Hollywood (either full or partial deployment), and for TCP
+  at both hosts.
+  \item[Number of inconsistent bytes in retransmissions] \hfill \\
+  This is useful to show where goodput is increased by the sender-side
+  modifications.
+  \item[Number of bytes delivered out-of-order] \hfill \\
+  This is useful to show where goodput is increased by the receiver-side
+  modifications.
+\end{description}
+
+For all three of these metrics, we will give a total for the entire session,
+and graph the value over one second intervals. The totals are useful as an
+overview, while the graphs will be better at showing how the modifications
+impact timely goodput.
+
+We present three sets of real-world evaluations, testing full deployments
+for both voice telephony and live video streaming, and a sender-only
+deployment of voice telephony. A sender-only configuration is tested as
+content providers will be able to modify their sending stacks, but are
+unlikely to be able to modify receivers.
+
+\subsubsection{Voice telephony}
+
+For this application, we simulate a G.711 voice telephony application.
+160 byte messages will be sent every 20ms, with simulated streams lasting
+120 seconds.
+
+Both sender and receiver have TCP Hollywood kernel modifications deployed.
+
+Play-out delay is fixed, and based on jitter measurements carried out
+before the simulations (and so there are two play-out delays, one for
+Glasgow<->London, and for Glasgow<->San Francisco). The play-out delay
+will be calculated such that 99\% of packets arrive on time to be used.
+
+\begin{figure*}[t]
+	\subfloat[Timely goodput\label{fig:voip:lon:gput}]{%
+		\rule{0.3\textwidth}{4cm}
+	}
+	\hfill
+	\subfloat[Inconsistent bytes\label{fig:voip:lon:incon}]{%
+		\rule{0.3\textwidth}{4cm}
+	}
+	\hfill
+	\subfloat[Out-of-order bytes\label{fig:voip:lon:ood}]{%
+		\rule{0.3\textwidth}{4cm}
+	}
+	\centering
+	\caption{Voice telephony (G.711) simulation from London, UK to Glasgow, UK - both TCP Hollywood hosts}
+	\label{fig:voip:lon}
+\end{figure*}
+
+Figure \ref{fig:voip:lon} shows the three metrics, as measured when
+simulating the application sending from London, UK, to Glasgow, UK.
+
+\begin{figure*}[t]
+	\centering
+	\subfloat[Timely goodput\label{fig:voip:sf:gput}]{\rule{0.3\textwidth}{4cm}}
+	\hfill
+	\subfloat[Inconsistent bytes\label{fig:voip:sf:incon}]{\rule{0.3\textwidth}{4cm}}
+	\hfill
+	\subfloat[Out-of-order bytes\label{fig:voip:sf:ood}]{\rule{0.3\textwidth}{4cm}}
+	\caption{Voice telephony (G.711) from San Francisco, UK to Glasgow, UK - both TCP Hollywood hosts}
+	\label{fig:voip:sf}
+\end{figure*}
+
+Figure \ref{fig:voip:sf} shows the three metrics, as measured when
+simulating the application sending from San Francisco, USA, to Glasgow, UK.
+
+\subsubsection{Live video streaming}
+
+Application based on the low-latency DASH application outlined in analysis.
+
+\begin{figure*}[t]
+	\centering
+	\subfloat[Timely goodput\label{fig:video:lon:gput}]{\rule{0.3\textwidth}{4cm}}
+	\hfill
+	\subfloat[Inconsistent bytes\label{fig:video:lon:incon}]{\rule{0.3\textwidth}{4cm}}
+	\hfill
+	\subfloat[Out-of-order bytes\label{fig:video:lon:ood}]{\rule{0.3\textwidth}{4cm}}
+	\caption{Video streaming simulation from London, UK to Glasgow, UK - both TCP Hollywood hosts}
+	\label{fig:voip:lon}
+\end{figure*}
+
+Figure \ref{fig:voip:lon} shows the three metrics, as measured when
+simulating the application sending from London, UK, to Glasgow, UK.
+
+\begin{figure*}[t]
+	\centering
+	\subfloat[Timely goodput\label{fig:video:sf:gput}]{\rule{0.3\textwidth}{4cm}}
+	\hfill
+	\subfloat[Inconsistent bytes\label{fig:video:sf:incon}]{\rule{0.3\textwidth}{4cm}}
+	\hfill
+	\subfloat[Out-of-order bytes\label{fig:video:sf:ood}]{\rule{0.3\textwidth}{4cm}}
+	\caption{Video streaming from San Francisco, UK to Glasgow, UK - both TCP Hollywood hosts}
+	\label{fig:video:sf}
+\end{figure*}
+
+Figure \ref{fig:video:sf} shows the three metrics, as measured when
+simulating the application sending from San Francisco, USA, to Glasgow, UK.
+
+\subsubsection{Sender-only deployment}
+
+This is where only the sender has TCP Hollywood modifications deployed.
+An important configuration to test: it is likely to be the most common.
+Content providers are likely to be able to modify the sender stack, but not
+the receiver-side.
+
+As there are no receiver-side modifications, we drop the out-of-order bytes
+metric -- it doesn't apply here.
+
+The evaluation is performed using the same simulated voice telephony
+application used above.
+
+Without the receiver-side modifications, head-of-line blocking remains.
+As shown in Figure \ref{diagram:motivation_latency}, head-of-line blocking
+accounts for a larger proportion of the latency TCP introduces, compared
+with retransmissions. The figure shows four packets delayed, three of which
+are delayed by head-of-line blocking. Future work should include a
+mechanism that allows the receiver to notify the sender that the receiver
+side modifications are not in use. Then, in the event of a retransmission,
+the sender is aware that a certain number of messages are being delayed.
+
+\begin{figure}[t]
+	\centering
+	\subfloat[Timely goodput\label{fig:voip:sender:lon:gput}]{\rule{\columnwidth}{4cm}}
+  \\
+	\subfloat[Inconsistent bytes\label{fig:voip:sender:lon:incon}]{\rule{\columnwidth}{4cm}}
+	\caption{Voice telephony (G.711) simulation from London, UK to Glasgow, UK -- TCP Hollywood on sender only}
+	\label{fig:voip:sender:lon}
+\end{figure}
+
+Figure \ref{fig:voip:sender:lon} shows the two metrics, as measured when
+simulating the application sending from London, UK, to Glasgow, UK.
+
+\begin{figure}[t]
+	\centering
+	\subfloat[Timely goodput\label{fig:voip:sender:sf:gput}]{%
+		\rule{0.45\textwidth}{4cm}
+	}
+	\\
+	\subfloat[Inconsistent bytes\label{fig:voip:sender:sf:incon}]{%
+		\rule{0.45\textwidth}{4cm}
+	}
+	\caption{Voice telephony (G.711) from San Francisco, UK to Glasgow, UK -- TCP Hollywood on sender only}
+	\label{fig:voip:sender:sf}
+\end{figure}
+
+Figure \ref{fig:voip:sender:sf} shows the two metrics, as measured when
+simulating the application sending from San Francisco, USA, to Glasgow, UK.
+
+%--------------------------------------------------------------------------------------------------
+\subsection{Testbed}
+\label{sec:perf:testbed}
+
+Using a testbed gives us control and flexibility vs the real-world
+evaluations. We'll test a range of RTT/play-out delay combinations near
+the regular TCP retransmission boundary.

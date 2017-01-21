@@ -1,0 +1,84 @@
+% !TEX root = ../utltcp-paper.tex
+
+The immediate precursors of TCP Hollywood are the Minion protocol suite
+\cite{nowlan:2012:minion} and TL-TCP \cite{mukherjee:2000:timelines}. The
+Minion protocol suite includes uTCP, which proves a COBS-encoded user-space
+datagram abstraction atop TCP, with prioritization and out-of-order
+delivery. uTCP also provides an API that enables applications to replace
+existing datagrams in the transmission buffer before they are sent.
+Datagrams that have already been sent (i.e., those being retransmitted)
+cannot be replaced. The authors acknowledge this as a conservative design
+choice, made to ensure middlebox interaction.
+
+Our wire compatibility experiments from Section \ref{sec:deployability},
+and those of Honda et al. \cite{honda:2011:extend-tcp}, indicate that
+inconsistent retransmissions are possible, but that the integrity of the
+sequence space needs to be preserved. The need to consider middlebox
+interaction with new or modified protocols is underscored by the design,
+and success, of Multi-Path TCP \cite{raiciu:2012:hard}. The design of
+TCP Hollywood builds on a number of protocols, and tweaks to TCP, that are
+unlikely to be deployable.
+
+TL-TCP marks the first appearance of time-lines and
+inconsistent retransmissions~\cite{mukherjee:2000:timelines}. The underlying
+mechanism works by injecting gaps into the sequence space. This modification is
+observable by middleboxes, and so is unlikely to be deployable. TCP Hollywood
+builds on TL-TCP, and related protocols, but does so while focussing on
+deployability. As discussed in Section \ref{sec:design}, we minimise changes
+to the wire protocol to maximise
+compatibility with middleboxes.
+
+Transport protocols that rely on application-layer metadata to
+improve performance include Partially Error Controlled Connection
+(PECC)~\cite{dempsey:1992:adaptive} and PRTP-ECN~\cite{grinnemo:2001:prtp}.
+Other protocols such as SCTP \cite{rfc:4960} and DCCP \cite{rfc:4340} were
+engineered to broaden the delivery models offered by the transport-layer.
+Despite standardization and deployment in mainstream operating systems, their
+use is hampered by a lack of middlebox support.
+% The main difference between these protocols and TCP Hollywood is the focus on
+% deployability: middlebox interaction must be considered.
+
+Liang and Cheriton in~\cite{liang:2002:tcp-rtm} note that loss can be more detrimental
+to streaming application performance than jitter. On-demand streaming
+applications, for example, can effectively hide jitter from the application but
+are unable to tolerate loss. The authors present a modified TCP, TCP-RTM, that
+allows receivers to read beyond a gap in the receive buffer. The sequence
+numbers in the gap are ACKed, preventing their retransmission by the sender.
+Applications read from the socket at a predetermined play-out rate offset by
+some delay. There are no changes to TCP itself; instead, the interaction
+between application and receiver buffer is modified. Selective negative
+ACKs (NACKs) allow senders to be informed of the segments that were skipped
+over.
+
+Deadline-aware TCP is a modified TCP  specifically for datacenters, and
+implements flows with soft time constraints~\cite{vamanan:2012:d2tcp}. The
+modifications allow for the TCP window size and congestion back-off to be varied
+based on the flow congestion deadline. Flows with imminent deadlines benefit
+from larger windows. As the network becomes congested, flows will tend to
+complete closer to their deadlines. The modifications require ECN support in the
+network, and a modified TCP sender. Requiring ECN support effectively prevents
+deployment outside of datacenters.
+
+QUIC (Quick UDP Internet Connections) \cite{IS15} is a transport-layer protocol
+implemented atop UDP. It incorporates a number of latency-reducing techniques
+(e.g., large initial data transfers, low RTT setups) that are slowly migrating
+to TCP. Its use of UDP as a substrate provides an interesting contrast to our
+choice of TCP, but follows from the architectural principles described in Section
+\ref{sec:background-tcp} (i.e., that TCP and UDP are substrates for novel transport
+layer protocols). Implementing atop UDP allows QUIC to operate entirely in userspace,
+greatly improving the likelihood of deployment. However, the flexibility
+of a userspace implementation comes at the cost of universal deployment. Upon detection 
+of a blocking device QUIC is forced to
+fall back to TCP; QUIC authors indicate that this happens in around 5-10\% of cases, based
+on initial results. We therefore view TCP Hollywood and QUIC as complementary, rather
+than competing, protocols: falling back from QUIC to TCP Hollywood, rather than standard
+TCP, is likely to offer performance benefits to latency-sensitive applications.
+
+The trade-off between a UDP-based protocol with fall-back to standard TCP,
+as chosen by the QUIC authors, and a slightly modified TCP variant, as we
+have chosen, hinges on ease of implementation and deployment. We believe
+our implementation is simpler, since we build on the TCP infrastructure,
+but acknowledge that this gives us less flexibility to evolve the protocol.
+Equally, we believe our implementation is likely to be more deployable, as
+it builds on TCP. Broader measurement studies, for both TCP Hollywood and
+QUIC, are needed to evaluate this claim, however.

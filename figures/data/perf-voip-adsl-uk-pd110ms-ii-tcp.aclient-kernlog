@@ -1,0 +1,889 @@
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Linux version 3.13.0-100-generic (buildd@lgw01-52) (gcc version 4.8.4 (Ubuntu 4.8.4-2ubuntu1~14.04.3) ) #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016 (Ubuntu 3.13.0-100.147-generic 3.13.11-ckt39)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-100-generic root=UUID=89c70291-5265-41d7-ad60-fa7c3c5fad71 ro console=tty1 console=ttyS0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] KERNEL supported cpus:
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   Intel GenuineIntel
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   AMD AuthenticAMD
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   Centaur CentaurHauls
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] NX (Execute Disable) protection: active
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] SMBIOS 2.5 present.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] No AGP bridge found
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] MTRR default type: uncachable
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] MTRR variable ranges disabled:
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] CPU MTRRs all blank - virtualized system.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffff88000009fff0]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Scanning 1 areas for low memory corruption
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe2000, 0x01fe2fff] PGTABLE
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe3000, 0x01fe3fff] PGTABLE
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe4000, 0x01fe4fff] PGTABLE
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x7fc00000-0x7fdfffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x7fc00000-0x7fdfffff] page 2M
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe5000, 0x01fe5fff] PGTABLE
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x7c000000-0x7fbfffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x7c000000-0x7fbfffff] page 2M
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x00100000-0x7bffffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x00200000-0x7bffffff] page 2M
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x7fe00000-0x7ffeffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x7fe00000-0x7ffeffff] page 4k
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe6000, 0x01fe6fff] PGTABLE
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] RAMDISK: [mem 0x3720c000-0x378fdfff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: RSDP 00000000000e0000 000024 (v02 VBOX  )
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: XSDT 000000007fff0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: FACP 000000007fff00f0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: DSDT 000000007fff0470 00210F (v01 VBOX   VBOXBIOS 00000002 INTL 20150515)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: FACS 000000007fff0200 000040
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: APIC 000000007fff0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: SSDT 000000007fff02a0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20150515)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] No NUMA configuration found
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initmem setup node 0 [mem 0x00000000-0x7ffeffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   NODE_DATA [mem 0x7ffeb000-0x7ffeffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [ffffea0000000000-ffffea0001ffffff] PMD -> [ffff88007d600000-ffff88007f5fffff] on node 0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Zone ranges:
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   Normal   empty
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Movable zone start for each node
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Early memory node ranges
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   node   0: [mem 0x00001000-0x0009efff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   node   0: [mem 0x00100000-0x7ffeffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] On node 0 totalpages: 524174
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA zone: 64 pages used for memmap
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA zone: 21 pages reserved
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA32 zone: 8128 pages used for memmap
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA32 zone: 520176 pages, LIFO batch:31
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: PM-Timer IO Port: 0x4008
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IRQ0 used by override.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IRQ2 used by override.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IRQ9 used by override.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Using ACPI (MADT) for SMP configuration information
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] nr_irqs_gsi: 40
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: [mem 0x80000000-0xfebfffff] available for PCI devices
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Booting paravirtualized kernel on bare hardware
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] setup_percpu: NR_CPUS:256 nr_cpumask_bits:256 nr_cpu_ids:1 nr_node_ids:1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PERCPU: Embedded 27 pages/cpu @ffff88007fc00000 s81536 r8192 d20864 u2097152
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] pcpu-alloc: s81536 r8192 d20864 u2097152 alloc=1*2097152
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] pcpu-alloc: [0] 0 
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 515961
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Policy zone: DMA32
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.13.0-100-generic root=UUID=89c70291-5265-41d7-ad60-fa7c3c5fad71 ro console=tty1 console=ttyS0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Checking aperture...
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] No AGP bridge found
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Calgary: detecting Calgary via BIOS EBDA area
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Memory: 2040064K/2096696K available (7421K kernel code, 1146K rwdata, 3420K rodata, 1336K init, 1448K bss, 56632K reserved)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Hierarchical RCU implementation.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	RCU dyntick-idle grace-period acceleration is enabled.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=1.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	Offload RCU callbacks from all CPUs
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	Offload RCU callbacks from CPUs: 0.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] NR_IRQS:16640 nr_irqs:256 16
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Console: colour VGA+ 80x25
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] console [tty1] enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] console [ttyS0] enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] allocated 8388608 bytes of page_cgroup
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: Fast TSC calibration failed
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: Unable to calibrate against PIT
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: using PMTIMER reference calibration
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: Detected 2132.079 MHz processor
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.016006] Calibrating delay loop (skipped), value calculated using timer frequency.. 4264.15 BogoMIPS (lpj=8528316)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.020648] pid_max: default: 32768 minimum: 301
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.021490] Security Framework initialized
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.022270] AppArmor: AppArmor initialized
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.023018] Yama: becoming mindful.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.028528] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.030811] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.032000] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.032010] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.033292] Initializing cgroup subsys memory
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.034068] Initializing cgroup subsys devices
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.034850] Initializing cgroup subsys freezer
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.035630] Initializing cgroup subsys blkio
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.036000] Initializing cgroup subsys perf_event
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.036688] Initializing cgroup subsys hugetlb
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.037640] tseg: 0000000000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.037699] mce: CPU supports 0 MCE banks
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.038547] Last level iTLB entries: 4KB 512, 2MB 1024, 4MB 512
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.038547] Last level dTLB entries: 4KB 1024, 2MB 1024, 4MB 512
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.038547] tlb_flushall_shift: 5
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.074775] Freeing SMP alternatives memory: 32K (ffffffff81e6e000 - ffffffff81e76000)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.083176] ACPI: Core revision 20131115
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.085070] ACPI: All ACPI Tables successfully acquired
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.086097] ftrace: allocating 28622 entries in 112 pages
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.117181] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.157188] smpboot: CPU0: AMD Opteron(TM) Processor 6274 (fam: 15, model: 01, stepping: 02)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.160000] Performance Events: Broken PMU hardware detected, using software events only.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.160000] Failed to access perfctr msr (MSR c0010004 is 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.160912] x86: Booted up 1 node, 1 CPUs
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.161678] smpboot: Total of 1 processors activated (4264.15 BogoMIPS)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.163086] NMI watchdog: disabled (cpu0): hardware events not enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.164000] devtmpfs: initialized
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.168129] EVM: security.selinux
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.168811] EVM: security.SMACK64
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.169504] EVM: security.ima
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.170160] EVM: security.capability
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.171980] pinctrl core: initialized pinctrl subsystem
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.172000] regulator-dummy: no parameters
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.172000] RTC time: 10:22:29, date: 01/19/17
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.172631] NET: Registered protocol family 16
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.173934] cpuidle: using governor ladder
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.174549] cpuidle: using governor menu
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.176315] ACPI: bus type PCI registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.177059] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.178120] PCI: Using configuration type 1 for base access
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.178999] PCI: Using configuration type 1 for extended access
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.181172] bio: create slab <bio-0> at 0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.182108] ACPI: Added _OSI(Module Device)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.182866] ACPI: Added _OSI(Processor Device)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.183648] ACPI: Added _OSI(3.0 _SCP Extensions)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.184002] ACPI: Added _OSI(Processor Aggregator Device)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.185825] ACPI: Executed 1 blocks of module-level executable AML code
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.190345] ACPI: Interpreter enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.191069] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20131115/hwxface-580)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.193270] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20131115/hwxface-580)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.194957] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S3_] (20131115/hwxface-580)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.196000] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S4_] (20131115/hwxface-580)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.196000] ACPI: (supports S0 S5)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.196000] ACPI: Using IOAPIC for interrupt routing
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.196000] PCI: Ignoring host bridge windows from ACPI; if necessary, use "pci=use_crs" and report a bug
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.196861] ACPI: No dock devices found.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.207838] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.208007] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.209462] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.210389] acpi PNP0A03:00: host bridge window [io  0x0000-0x0cf7] (ignored)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.210389] acpi PNP0A03:00: host bridge window [io  0x0d00-0xffff] (ignored)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.210389] acpi PNP0A03:00: host bridge window [mem 0x000a0000-0x000bffff] (ignored)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.210389] acpi PNP0A03:00: host bridge window [mem 0x80000000-0xffdfffff] (ignored)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.210389] PCI: root bus 00: using default resources
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.210598] PCI host bridge to bus 0000:00
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.211358] pci_bus 0000:00: root bus resource [bus 00-ff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.212000] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.212155] pci_bus 0000:00: root bus resource [mem 0x00000000-0xffffffffffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.213608] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.214176] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.214900] pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.220658] pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe0ffffff pref]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.240325] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.244000] pci 0000:00:03.0: reg 0x10: [mem 0xf0000000-0xf001ffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.248302] pci 0000:00:03.0: reg 0x18: [io  0xd000-0xd007]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.257996] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.260916] pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.264480] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.267484] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.277129] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.277767] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.279405] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.281303] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.284148] pci 0000:00:0d.0: reg 0x10: [io  0xd040-0xd047]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.288430] pci 0000:00:0d.0: reg 0x18: [io  0xd050-0xd057]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.294756] pci 0000:00:0d.0: reg 0x20: [io  0xd060-0xd06f]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.296373] pci 0000:00:0d.0: reg 0x24: [mem 0xf0804000-0xf0805fff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.302259] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.303994] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 *11)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.305000] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 *10 11)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.306449] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 *9 10 11)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.308145] ACPI: Enabled 2 GPEs in block 00 to 07
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.309119] ACPI: \_SB_.PCI0: notify handler is installed
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.309138] Found 1 acpi root devices
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.309413] vgaarb: setting as boot device: PCI:0000:00:02.0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.310300] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.311724] vgaarb: loaded
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] vgaarb: bridge control possible 0000:00:02.0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] SCSI subsystem initialized
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] libata version 3.00 loaded.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] ACPI: bus type USB registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] usbcore: registered new interface driver usbfs
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] usbcore: registered new interface driver hub
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.312000] usbcore: registered new device driver usb
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.317163] PCI: Using ACPI for IRQ routing
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.317939] PCI: pci_cache_line_size set to 64 bytes
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.318081] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.318088] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.318236] NetLabel: Initializing
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.318931] NetLabel:  domain hash size = 128
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.320000] NetLabel:  protocols = UNLABELED CIPSOv4
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.321819] NetLabel:  unlabeled traffic allowed by default
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.322867] Switched to clocksource refined-jiffies
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.605048] AppArmor: AppArmor Filesystem Enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.605993] pnp: PnP ACPI init
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.606747] ACPI: bus type PNP registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.608043] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.608058] pnp 00:01: [dma 4]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.608075] pnp 00:01: Plug and Play ACPI device, IDs PNP0200 (active)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.608173] pnp 00:02: Plug and Play ACPI device, IDs PNP0f03 (active)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.609108] pnp: PnP ACPI: found 3 devices
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.609867] ACPI: bus type PNP unregistered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.616238] Switched to clocksource acpi_pm
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.617049] pci_bus 0000:00: resource 4 [io  0x0000-0xffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.617073] pci_bus 0000:00: resource 5 [mem 0x00000000-0xffffffffffff]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.617147] NET: Registered protocol family 2
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.618456] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.619434] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.622244] TCP: Hash tables configured (established 16384 bind 16384)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.623991] TCP: reno registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.623994] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.625854] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.627065] NET: Registered protocol family 1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.627932] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.628927] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.629877] pci 0000:00:02.0: Video device with shadowed ROM
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.629925] PCI: CLS 0 bytes, default 64
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.630046] Trying to unpack rootfs image as initramfs...
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.790355] Freeing initrd memory: 7112K (ffff88003720c000 - ffff8800378fe000)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.792158] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.793658] microcode: CPU0: patch_level=0x06000626
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.794530] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.796015] Scanning for low memory corruption every 60 seconds
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.796410] Initialise system trusted keyring
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.797244] audit: initializing netlink socket (disabled)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.798120] type=2000 audit(1484821349.796:1): initialized
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.827835] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.834195] zbud: loaded
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.835038] VFS: Disk quotas dquot_6.5.2
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.835831] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.836865] fuse init (API version 7.22)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.837061] msgmni has been set to 3998
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.837910] Key type big_key registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.839242] Key type asymmetric registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.839994] Asymmetric key parser 'x509' registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.840373] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.841079] io scheduler noop registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.841862] io scheduler deadline registered (default)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.844229] io scheduler cfq registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.845040] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.845934] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.846963] ipmi message handler version 39.2
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.847859] ACPI: Deprecated procfs I/F for AC is loaded, please retry with CONFIG_ACPI_PROCFS_POWER cleared
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.849177] ACPI: AC Adapter [AC] (on-line)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.850207] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.851590] ACPI: Power Button [PWRF]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.852448] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.853838] ACPI: Sleep Button [SLPF]
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.854777] GHES: HEST is not enabled!
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.855618] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.857253] Linux agpgart interface v0.103
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.859430] brd: module loaded
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.860420] loop: module loaded
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.861498] libphy: Fixed MDIO Bus: probed
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.862366] tun: Universal TUN/TAP device driver, 1.6
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.863199] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.864045] PPP generic driver version 2.4.2
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.864045] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.864045] ehci-pci: EHCI PCI platform driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.866867] ehci-platform: EHCI generic platform driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.867834] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.868020] ohci-pci: OHCI PCI platform driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.869381] ohci-platform: OHCI generic platform driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.870302] uhci_hcd: USB Universal Host Controller Interface driver
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.871416] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.873182] serio: i8042 KBD port at 0x60,0x64 irq 1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.874072] serio: i8042 AUX port at 0x60,0x64 irq 12
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.875001] mousedev: PS/2 mouse device common for all mice
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.876191] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.878047] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.879073] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.880072] device-mapper: uevent: version 1.0.3
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.880072] device-mapper: ioctl: 4.27.0-ioctl (2013-10-30) initialised: dm-devel@redhat.com
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.880072] ledtrig-cpu: registered to indicate activity on CPUs
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.882184] TCP: cubic registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.883206] NET: Registered protocol family 10
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.884894] NET: Registered protocol family 17
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.885751] Key type dns_resolver registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.886777] Loading compiled-in X.509 certificates
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.888317] Loaded X.509 cert 'Magrathea: Glacier signing key: db4b16354c147008e161439191dae8c83268d04b'
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.889993] registered taskstats version 1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.892864] Key type trusted registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.897552] Key type encrypted registered
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.898317] AppArmor: AppArmor sha1 policy hashing enabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.899193] IMA: No TPM chip found, activating TPM-bypass!
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.900303] regulator-dummy: disabling
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.901058]   Magic number: 1:279:376
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.901863] rtc_cmos rtc_cmos: setting system clock to 2017-01-19 10:22:30 UTC (1484821350)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.903378] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.904028] EDD information not available.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.904028] PM: Hibernation image not present or could not be loaded.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.907806] Freeing unused kernel memory: 1336K (ffffffff81d20000 - ffffffff81e6e000)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.909215] Write protecting the kernel read-only data: 12288k
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.909823] Freeing unused kernel memory: 760K (ffff880001742000 - ffff880001800000)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.915028] Freeing unused kernel memory: 676K (ffff880001b57000 - ffff880001c00000)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.975696] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    0.976037] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.321221] psmouse serio1: alps: Unknown ALPS touchpad: E7=10 00 64, EC=10 00 64
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.324024] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.369082] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:83:d9:bc
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.370072] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.371152] ahci 0000:00:0d.0: version 3.0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.372004] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.372819] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.374271] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.377072] scsi0 : ahci
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.377857] ata1: SATA max UDMA/133 abar m8192@0xf0804000 port 0xf0804100 irq 21
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.696703] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.698069] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.698967] ata1.00: 83886080 sectors, multi 128: LBA48 NCQ (depth 31/32)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.700235] ata1.00: configured for UDMA/133
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.701190] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.703037] sd 0:0:0:0: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.704173] sd 0:0:0:0: [sda] Write Protect is off
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.704173] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.704173] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.706189]  sda: sda1
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.706826] sd 0:0:0:0: Attached scsi generic sg0 type 0
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    1.708907] sd 0:0:0:0: [sda] Attached SCSI disk
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    2.796687] Switched to clocksource tsc
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    3.251942] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    3.352756] random: init urandom read with 35 bits of entropy available
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    3.630065] EXT4-fs (sda1): re-mounted. Opts: (null)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288210] vboxvideo: module verification failed: signature and/or  required key missing - tainting kernel
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288245] vboxvideo: Unknown symbol drm_open (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288249] vboxvideo: Unknown symbol drm_poll (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288253] vboxvideo: Unknown symbol drm_pci_init (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288261] vboxvideo: Unknown symbol drm_ioctl (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288264] vboxvideo: Unknown symbol drm_mmap (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288268] vboxvideo: Unknown symbol drm_pci_exit (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.288271] vboxvideo: Unknown symbol drm_release (err 0)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.350022] input: Unspecified device as /devices/pci0000:00/0000:00:04.0/input/input5
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.358809] vboxguest: misc device minor 57, IRQ 20, I/O port d020, MMIO at 00000000f0400000 (size 0x400000)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.358813] vboxguest: Successfully loaded version 4.3.36_Ubuntu (interface 0x00010004)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.434200] random: nonblocking pool is initialized
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.435482] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    5.447188] input: Video Bus as /devices/LNXSYSTM:00/device:00/PNP0A03:00/LNXVIDEO:00/input/input6
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    6.420688] type=1400 audit(1484821356.018:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=414 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    6.421161] type=1400 audit(1484821356.018:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=414 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    6.421525] type=1400 audit(1484821356.018:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=414 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    6.817235] type=1400 audit(1484821356.410:5): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=434 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    6.817752] type=1400 audit(1484821356.410:6): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=434 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    6.818110] type=1400 audit(1484821356.410:7): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=434 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    7.340016] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    7.343448] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [    7.343878] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   11.005548] EXT4-fs (sda1): resizing filesystem from 1048320 to 10485504 blocks
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   11.021342] EXT4-fs (sda1): resized filesystem to 10485504
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.432135] FS-Cache: Loaded
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.490259] RPC: Registered named UNIX socket transport module.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.490266] RPC: Registered udp transport module.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.490271] RPC: Registered tcp transport module.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.490275] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.543050] FS-Cache: Netfs 'nfs' registered for caching
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   12.632844] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   13.340300] type=1400 audit(1484821362.934:8): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/sbin/dhclient" pid=1023 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   13.340335] type=1400 audit(1484821362.934:9): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=1023 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   13.340360] type=1400 audit(1484821362.934:10): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=1023 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   13.341298] type=1400 audit(1484821362.934:11): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=1023 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   13.341310] type=1400 audit(1484821362.934:12): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=1023 comm="apparmor_parser"
+Jan 19 10:22:42 vagrant-ubuntu-trusty-64 kernel: [   13.341587] type=1400 audit(1484821362.934:13): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=1023 comm="apparmor_parser"
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.711479] type=1400 audit(1484821363.302:14): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=1025 comm="apparmor_parser"
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767847] vboxvideo: Unknown symbol drm_open (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767859] vboxvideo: Unknown symbol drm_poll (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767866] vboxvideo: Unknown symbol drm_pci_init (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767876] vboxvideo: Unknown symbol drm_ioctl (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767882] vboxvideo: Unknown symbol drm_mmap (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767888] vboxvideo: Unknown symbol drm_pci_exit (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   13.767894] vboxvideo: Unknown symbol drm_release (err 0)
+Jan 19 10:22:43 vagrant-ubuntu-trusty-64 kernel: [   14.397836] vboxsf: Successfully loaded version 4.3.36_Ubuntu (interface 0x00010004)
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.405566] VBoxService 4.3.36_Ubuntu r105129 (verbosity: 0) linux.amd64 (Jan 27 2016 11:57:44) release log
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.405566] 00:00:00.000205 main     Log opened 2017-01-19T10:22:44.003615000Z
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.408070] 00:00:00.002821 main     OS Product: Linux
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.408980] 00:00:00.003724 main     OS Release: 3.13.0-100-generic
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.409881] 00:00:00.004631 main     OS Version: #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.409944] 00:00:00.004689 main     OS Service Pack: #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.410012] 00:00:00.004756 main     Executable: /usr/sbin/VBoxService
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.410012] 00:00:00.004759 main     Process ID: 1154
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.410012] 00:00:00.004760 main     Package type: LINUX_64BITS_GENERIC (OSE)
+Jan 19 10:22:44 vagrant-ubuntu-trusty-64 kernel: [   14.419484] 00:00:00.014199 main     4.3.36_Ubuntu r105129 started. Verbose level = 0
+Jan 19 10:50:52 vagrant-ubuntu-trusty-64 kernel: [ 1702.870756] gre: GRE over IPv4 demultiplexor driver
+Jan 19 10:50:52 vagrant-ubuntu-trusty-64 kernel: [ 1702.882315] openvswitch: Open vSwitch switching datapath
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.547035] SGI XFS with ACLs, security attributes, realtime, large block/inode numbers, no debug enabled
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.596411] xor: measuring software checksum speed
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.636922]    prefetch64-sse:   828.000 MB/sec
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.679338]    generic_sse:   907.000 MB/sec
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.679338] xor: using function: generic_sse (907.000 MB/sec)
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.752619] raid6: sse2x1    2483 MB/s
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.820467] raid6: sse2x2    3854 MB/s
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.888752] raid6: sse2x4    4608 MB/s
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.888804] raid6: using algorithm sse2x4 (4608 MB/s)
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.888851] raid6: using ssse3x2 recovery algorithm
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.917777] bio: create slab <bio-1> at 1
+Jan 19 13:26:45 vagrant-ubuntu-trusty-64 kernel: [11055.919859] Btrfs loaded
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Linux version 3.18.34-hollywood-g0bb4a643-dirty (vagrant@vagrant-ubuntu-trusty-64) (gcc version 4.9.4 (Ubuntu 4.9.4-2ubuntu1~14.04.1) ) #1 SMP Thu Jan 19 12:42:35 UTC 2017
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.18.34-hollywood-g0bb4a643-dirty root=UUID=89c70291-5265-41d7-ad60-fa7c3c5fad71 ro console=tty1 console=ttyS0
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tseg: 0000000000
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Jan 19 13:34:52 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpu
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Linux version 3.18.34-hollywood-g0bb4a643-dirty (vagrant@vagrant-ubuntu-trusty-64) (gcc version 4.9.4 (Ubuntu 4.9.4-2ubuntu1~14.04.1) ) #1 SMP Thu Jan 19 12:42:35 UTC 2017
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.18.34-hollywood-g0bb4a643-dirty root=UUID=89c70291-5265-41d7-ad60-fa7c3c5fad71 ro console=tty1 console=ttyS0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tseg: 0000000000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] NX (Execute Disable) protection: active
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] SMBIOS 2.5 present.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] AGP: No AGP bridge found
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] MTRR default type: uncachable
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] MTRR variable ranges disabled:
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] CPU MTRRs all blank - virtualized system.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffff88000009fff0]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fdd000, 0x01fddfff] PGTABLE
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fde000, 0x01fdefff] PGTABLE
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fdf000, 0x01fdffff] PGTABLE
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x7fc00000-0x7fdfffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x7fc00000-0x7fdfffff] page 2M
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe0000, 0x01fe0fff] PGTABLE
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x7c000000-0x7fbfffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x7c000000-0x7fbfffff] page 2M
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x00100000-0x7bffffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x00200000-0x7bffffff] page 2M
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] init_memory_mapping: [mem 0x7fe00000-0x7ffeffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [mem 0x7fe00000-0x7ffeffff] page 4k
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] BRK [0x01fe1000, 0x01fe1fff] PGTABLE
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] RAMDISK: [mem 0x36126000-0x3708afff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: Early table checksum verification disabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: DSDT 0x000000007FFF0470 00210F (v01 VBOX   VBOXBIOS 00000002 INTL 20150515)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: FACS 0x000000007FFF0200 000040
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: APIC 0x000000007FFF0240 000054 (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: SSDT 0x000000007FFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20150515)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] No NUMA configuration found
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] NODE_DATA(0) allocated [mem 0x7ffc9000-0x7ffeffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]  [ffffea0000000000-ffffea0001ffffff] PMD -> [ffff88007d600000-ffff88007f5fffff] on node 0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Zone ranges:
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   Normal   empty
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Movable zone start for each node
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Early memory node ranges
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   node   0: [mem 0x00001000-0x0009efff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   node   0: [mem 0x00100000-0x7ffeffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Initmem setup node 0 [mem 0x00001000-0x7ffeffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] On node 0 totalpages: 524174
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA zone: 64 pages used for memmap
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA zone: 21 pages reserved
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA32 zone: 8128 pages used for memmap
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000]   DMA32 zone: 520176 pages, LIFO batch:31
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: PM-Timer IO Port: 0x4008
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] IOAPIC[0]: apic_id 1, version 32, address 0xfec00000, GSI 0-23
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IRQ0 used by override.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] ACPI: IRQ9 used by override.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Using ACPI (MADT) for SMP configuration information
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] smpboot: Allowing 1 CPUs, 0 hotplug CPUs
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] e820: [mem 0x80000000-0xfebfffff] available for PCI devices
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Booting paravirtualized kernel on bare hardware
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:1 nr_cpu_ids:1 nr_node_ids:1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PERCPU: Embedded 30 pages/cpu @ffff88007fc00000 s83584 r8192 d31104 u2097152
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] pcpu-alloc: s83584 r8192 d31104 u2097152 alloc=1*2097152
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] pcpu-alloc: [0] 0 
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 515961
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Policy zone: DMA32
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.18.34-hollywood-g0bb4a643-dirty root=UUID=89c70291-5265-41d7-ad60-fa7c3c5fad71 ro console=tty1 console=ttyS0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] AGP: Checking aperture...
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] AGP: No AGP bridge found
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Memory: 2031280K/2096696K available (6634K kernel code, 1487K rwdata, 3180K rodata, 1728K init, 3164K bss, 65416K reserved)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Hierarchical RCU implementation.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=1.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] NR_IRQS:524544 nr_irqs:256 0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	Offload RCU callbacks from all CPUs
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] 	Offload RCU callbacks from CPUs: 0.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] Console: colour VGA+ 80x25
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] console [tty1] enabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] console [ttyS0] enabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] allocated 8388608 bytes of page_cgroup
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: Fast TSC calibration failed
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: Unable to calibrate against PIT
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: HPET/PMTIMER calibration failed
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.000000] tsc: Marking TSC unstable due to could not calculate TSC khz
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.013000] Calibrating delay loop... 3010.56 BogoMIPS (lpj=1505280)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.022000] pid_max: default: 32768 minimum: 301
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.024000] ACPI: Core revision 20140926
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.039000] ACPI: All ACPI Tables successfully acquired
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.043000] Security Framework initialized
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.044000] SELinux:  Initializing.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.045000] SELinux:  Starting in permissive mode
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.047000] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.050000] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.051000] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.052000] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.065000] Initializing cgroup subsys memory
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.066000] Initializing cgroup subsys devices
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.067000] Initializing cgroup subsys freezer
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.068000] Initializing cgroup subsys net_cls
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.069000] Initializing cgroup subsys blkio
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.071000] Initializing cgroup subsys perf_event
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.072000] Initializing cgroup subsys hugetlb
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.073000] mce: CPU supports 0 MCE banks
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.074000] Last level iTLB entries: 4KB 512, 2MB 1024, 4MB 512
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.074000] Last level dTLB entries: 4KB 1024, 2MB 1024, 4MB 512, 1GB 0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.094000] Freeing SMP alternatives memory: 28K (ffffffff81cbd000 - ffffffff81cc4000)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.103000] ftrace: allocating 25407 entries in 100 pages
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.129000] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.141000] smpboot: CPU0: AMD Opteron(TM) Processor 6274 (fam: 15, model: 01, stepping: 02)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.145000] APIC calibration not consistent with PM-Timer: 106ms instead of 100ms
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.145000] APIC delta adjusted to PM-Timer: 6300703 (6686011)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.146000] Performance Events: Broken PMU hardware detected, using software events only.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.147000] Failed to access perfctr msr (MSR c0010004 is 0)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.151000] x86: Booted up 1 node, 1 CPUs
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.151000] smpboot: Total of 1 processors activated (3010.56 BogoMIPS)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.152000] NMI watchdog: disabled (cpu0): hardware events not enabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.154000] devtmpfs: initialized
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.157000] evm: security.selinux
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.158000] evm: security.ima
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.158000] evm: security.capability
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.161000] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.162000] pinctrl core: initialized pinctrl subsystem
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.163000] NET: Registered protocol family 16
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.164000] cpuidle: using governor menu
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.165000] ACPI: bus type PCI registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.166000] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.167000] PCI: Using configuration type 1 for base access
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.168000] PCI: Using configuration type 1 for extended access
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.171000] ACPI: Added _OSI(Module Device)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.172000] ACPI: Added _OSI(Processor Device)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.172000] ACPI: Added _OSI(3.0 _SCP Extensions)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.173000] ACPI: Added _OSI(Processor Aggregator Device)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.175000] ACPI: Executed 1 blocks of module-level executable AML code
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.180000] ACPI: Interpreter enabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.181000] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20140926/hwxface-580)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.182000] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20140926/hwxface-580)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.184000] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S3_] (20140926/hwxface-580)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.185000] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S4_] (20140926/hwxface-580)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.187000] ACPI: (supports S0 S5)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.188000] ACPI: Using IOAPIC for interrupt routing
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.189000] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.197000] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.198000] acpi PNP0A03:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.199000] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.200000] PCI host bridge to bus 0000:00
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.201000] pci_bus 0000:00: root bus resource [bus 00-ff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.202000] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.203000] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.204000] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.205000] pci_bus 0000:00: root bus resource [mem 0x80000000-0xffdfffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.206000] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.206000] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.208000] pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.209000] pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe0ffffff pref]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.217000] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.218000] pci 0000:00:03.0: reg 0x10: [mem 0xf0000000-0xf001ffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.220000] pci 0000:00:03.0: reg 0x18: [io  0xd000-0xd007]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.225000] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.226000] pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.227000] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.228000] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.232000] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.233000] pci 0000:00:07.0: can't claim BAR 13 [io  0x4000-0x403f]: address conflict with ACPI PM1a_EVT_BLK [io  0x4000-0x4003]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.234000] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.236000] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.237000] pci 0000:00:0d.0: reg 0x10: [io  0xd040-0xd047]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.239000] pci 0000:00:0d.0: reg 0x18: [io  0xd050-0xd057]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.241000] pci 0000:00:0d.0: reg 0x20: [io  0xd060-0xd06f]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.242000] pci 0000:00:0d.0: reg 0x24: [mem 0xf0804000-0xf0805fff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.248000] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.251000] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 *11)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.254000] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 *10 11)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.256000] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 *9 10 11)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.258000] ACPI: Enabled 2 GPEs in block 00 to 07
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.260000] vgaarb: setting as boot device: PCI:0000:00:02.0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.260000] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.261000] vgaarb: loaded
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.262000] vgaarb: bridge control possible 0000:00:02.0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.265000] SCSI subsystem initialized
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.266000] ACPI: bus type USB registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.268000] usbcore: registered new interface driver usbfs
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.269000] usbcore: registered new interface driver hub
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.270000] usbcore: registered new device driver usb
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.273000] PCI: Using ACPI for IRQ routing
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.274000] PCI: pci_cache_line_size set to 64 bytes
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.275000] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.275000] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.277000] NetLabel: Initializing
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.278000] NetLabel:  domain hash size = 128
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.279000] NetLabel:  protocols = UNLABELED CIPSOv4
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.280000] NetLabel:  unlabeled traffic allowed by default
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.281000] Switched to clocksource refined-jiffies
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.312995] pnp: PnP ACPI init
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.313994] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.313994] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.314994] pnp: PnP ACPI: found 2 devices
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.321993] Switched to clocksource acpi_pm
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.323083] pci 0000:00:07.0: BAR 13: [io  0x4000-0x403f] has bogus alignment
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.324186] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.324186] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.324186] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.324186] pci_bus 0000:00: resource 7 [mem 0x80000000-0xffdfffff]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.324186] NET: Registered protocol family 2
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.325177] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.326285] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.327587] TCP: Hash tables configured (established 16384 bind 16384)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.329122] TCP: reno registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.329122] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.330916] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.332049] NET: Registered protocol family 1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.332049] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.333774] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.334791] pci 0000:00:02.0: Video device with shadowed ROM
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.334791] PCI: CLS 0 bytes, default 64
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.334791] Unpacking initramfs...
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.704246] Freeing initrd memory: 15764K (ffff880036126000 - ffff88003708b000)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.705572] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.708093] microcode: CPU0: patch_level=0x06000626
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.709053] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.711060] sha1_ssse3: Using SSSE3 optimized SHA-1 implementation
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.712081] sha256_ssse3: Using SSSE3 optimized SHA-256 implementation
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.714169] futex hash table entries: 256 (order: 2, 16384 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.715221] Initialise system trusted keyring
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.716210] audit: initializing netlink subsys (disabled)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.717200] audit: type=2000 audit(1484913347.717:1): initialized
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.718204] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.721064] zpool: loaded
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.722627] zbud: loaded
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.723334] VFS: Disk quotas dquot_6.5.2
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.724247] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.725271] msgmni has been set to 3998
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.726263] Key type big_key registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.727249] SELinux:  Registering netfilter hooks
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.728067] alg: No test for stdrng (krng)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.729281] NET: Registered protocol family 38
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.730216] Key type asymmetric registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.731198] Asymmetric key parser 'x509' registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.732102] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.733372] io scheduler noop registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.734247] io scheduler deadline registered (default)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.735235] io scheduler cfq registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.736215] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.737223] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.738234] ACPI: AC Adapter [AC] (on-line)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.739252] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.741153] ACPI: Power Button [PWRF]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.742087] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.743369] ACPI: Sleep Button [SLPF]
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.744235] GHES: HEST is not enabled!
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.745231] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.747070] Non-volatile memory driver v1.3
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.747070] Linux agpgart interface v0.103
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.748689] rdac: device handler registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.749690] hp_sw: device handler registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.750561] emc: device handler registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.751241] alua: device handler registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.752232] libphy: Fixed MDIO Bus: probed
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.753206] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.754218] ehci-pci: EHCI PCI platform driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.755200] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.756199] ohci-pci: OHCI PCI platform driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.757181] uhci_hcd: USB Universal Host Controller Interface driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.758181] usbcore: registered new interface driver usbserial
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.759190] usbcore: registered new interface driver usbserial_generic
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.760199] usbserial: USB Serial support registered for generic
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.761204] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.763212] serio: i8042 KBD port at 0x60,0x64 irq 1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.764227] serio: i8042 AUX port at 0x60,0x64 irq 12
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.765212] mousedev: PS/2 mouse device common for all mice
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.766222] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.769054] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.770808] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.771783] hidraw: raw HID events driver (C) Jiri Kosina
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.773059] usbcore: registered new interface driver usbhid
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.774191] usbhid: USB HID core driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.775103] drop_monitor: Initializing network drop monitor service
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.776078] TCP: cubic registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.776078] Initializing XFRM netlink socket
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.777694] NET: Registered protocol family 10
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.778721] NET: Registered protocol family 17
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.780087] Loading compiled-in X.509 certificates
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.782056] Loaded X.509 cert 'Magrathea: Glacier signing key: afc8e7eab58a1a0d7dbb240b46402872b1741a64'
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.783719] registered taskstats version 1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.790097] Key type trusted registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.797266] Key type encrypted registered
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.798233] ima: No TPM chip found, activating TPM-bypass!
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.799231] evm: HMAC attrs: 0x1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.800198] rtc_cmos rtc_cmos: setting system clock to 2017-01-20 11:55:48 UTC (1484913348)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.803335] Freeing unused kernel memory: 1728K (ffffffff81b0d000 - ffffffff81cbd000)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.839035] video: module verification failed: signature and/or  required key missing - tainting kernel
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.842054] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.847061] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input5
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.860069] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.862159] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.869036] libata version 3.00 loaded.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    0.873035] SSE version of gcm_enc/dec engaged.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.200035] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.233036] alg: No test for __gcm-aes-aesni (__driver-gcm-aes-aesni)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.240035] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:83:d9:bc
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.241804] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.243026] ahci 0000:00:0d.0: version 3.0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.243026] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.245026] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.246470] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.249073] alg: No test for crc32 (crc32-pclmul)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.251029] scsi host0: ahci
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.252081] ata1: SATA max UDMA/133 abar m8192@0xf0804000 port 0xf0804100 irq 21
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.560104] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.561325] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.562898] ata1.00: 83886080 sectors, multi 128: LBA48 NCQ (depth 31/32)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.565000] ata1.00: configured for UDMA/133
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.565079] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.569036] sd 0:0:0:0: [sda] 83886080 512-byte logical blocks: (42.9 GB/40.0 GiB)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.570600] sd 0:0:0:0: [sda] Write Protect is off
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.571268] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.572075] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.574613]  sda: sda1
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    1.575076] sd 0:0:0:0: [sda] Attached SCSI disk
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    3.872083] floppy0: no floppy controllers found
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    3.873086] work still pending
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    4.918990] hrtimer: interrupt took 8016102 ns
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    5.410055] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    5.530208] random: init urandom read with 55 bits of entropy available
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    5.776080] EXT4-fs (sda1): re-mounted. Opts: (null)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    5.849180] random: nonblocking pool is initialized
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.251228] fuse init (API version 7.23)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.422234] piix4_smbus 0000:00:07.0: SMBus Host Controller at 0x4100, revision 0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.534488] [drm] Initialized drm 1.1.0 20060810
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.536035] input: Unspecified device as /devices/pci0000:00/0000:00:04.0/input/input6
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.536035] vboxguest: misc device minor 58, IRQ 20, I/O port d020, MMIO at 00000000f0400000 (size 0x400000)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.536035] vboxguest: Successfully loaded version 4.3.36_Ubuntu (interface 0x00010004)
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.551161] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.557036] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.557036] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    7.589035] [drm] Initialized vboxvideo 1.0.0 20090303 for 0000:00:02.0 on minor 0
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [    8.058058] ppdev: user-space parallel port driver
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   10.544069] floppy0: no floppy controllers found
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   10.544069] work still pending
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   10.592035] device-mapper: uevent: version 1.0.3
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   10.594036] device-mapper: ioctl: 4.28.0-ioctl (2014-09-17) initialised: dm-devel@redhat.com
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.113147] FS-Cache: Loaded
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.212152] RPC: Registered named UNIX socket transport module.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.212152] RPC: Registered udp transport module.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.212152] RPC: Registered tcp transport module.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.212152] RPC: Registered tcp NFSv4.1 backchannel transport module.
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.269037] FS-Cache: Netfs 'nfs' registered for caching
+Jan 20 11:55:59 vagrant-ubuntu-trusty-64 kernel: [   11.333036] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.599194] vboxsf: Successfully loaded version 4.3.36_Ubuntu (interface 0x00010004)
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.617231] VBoxService 4.3.36_Ubuntu r105129 (verbosity: 0) linux.amd64 (Jan 27 2016 11:57:44) release log
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.617231] 00:00:00.002520 main     Log opened 2017-01-20T11:56:00.316761000Z
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005283 main     OS Product: Linux
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005363 main     OS Release: 3.18.34-hollywood-g0bb4a643-dirty
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005439 main     OS Version: #1 SMP Thu Jan 19 12:42:35 UTC 2017
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005507 main     OS Service Pack: #1 SMP Thu Jan 19 12:42:35 UTC 2017
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005576 main     Executable: /usr/sbin/VBoxService
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005600 main     Process ID: 1097
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.620236] 00:00:00.005623 main     Package type: LINUX_64BITS_GENERIC (OSE)
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.634290] 00:00:00.019358 main     4.3.36_Ubuntu r105129 started. Verbose level = 0
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.694164] cgroup: systemd-logind (913) created nested cgroup for controller "memory" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   12.694164] cgroup: "memory" requires setting use_hierarchy to 1 on the root
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   13.187038] gre: GRE over IPv4 demultiplexor driver
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   13.188040] geneve: Geneve driver
+Jan 20 11:56:00 vagrant-ubuntu-trusty-64 kernel: [   13.190154] openvswitch: Open vSwitch switching datapath
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.556038] IPv6: ADDRCONF(NETDEV_UP): aClient-eth0: link is not ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.570439] IPv6: ADDRCONF(NETDEV_CHANGE): aClient-eth0: link becomes ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.588085] IPv6: ADDRCONF(NETDEV_UP): aServer-eth0: link is not ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.591225] IPv6: ADDRCONF(NETDEV_CHANGE): aServer-eth0: link becomes ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.609288] IPv6: ADDRCONF(NETDEV_UP): cClient-eth0: link is not ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.637269] IPv6: ADDRCONF(NETDEV_CHANGE): cClient-eth0: link becomes ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.656042] IPv6: ADDRCONF(NETDEV_UP): cServer-eth0: link is not ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.665278] IPv6: ADDRCONF(NETDEV_CHANGE): cServer-eth0: link becomes ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.726044] IPv6: ADDRCONF(NETDEV_UP): switch1-eth3: link is not ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.751053] netem: version 1.3
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.753061] IPv6: ADDRCONF(NETDEV_CHANGE): switch1-eth3: link becomes ready
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.755281] htb: netem qdisc 10: is non-work-conserving?
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.807061] htb: netem qdisc 10: is non-work-conserving?
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.872066] device ovs-system entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.900071] device switch2 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.901071] device switch2-eth2 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.901071] device switch2-eth3 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.901071] device switch2-eth1 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.901071] device switch1-eth2 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.901071] device switch1-eth1 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.901071] device switch1-eth3 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   44.937052] device switch1 entered promiscuous mode
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   45.010056] htb: netem qdisc 10: is non-work-conserving?
+Jan 20 11:56:32 vagrant-ubuntu-trusty-64 kernel: [   45.027037] htb: netem qdisc 10: is non-work-conserving?
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.395048] Hollywood: out-of-order delivery enabled
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.395048] Hollywood: partial reliability disabled
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.405080] Hollywood: out-of-order delivery disabled
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.405080] Hollywood: partial reliability disabled
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.416036] Bluetooth: Core ver 2.19
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.417040] NET: Registered protocol family 31
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.417040] Bluetooth: HCI device and connection manager initialized
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.417040] Bluetooth: HCI socket layer initialized
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.417040] Bluetooth: L2CAP socket layer initialized
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.417040] Bluetooth: SCO socket layer initialized
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.429025] Netfilter messages via NETLINK v0.30.
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.449038] device aServer-eth0 entered promiscuous mode
+Jan 20 11:56:33 vagrant-ubuntu-trusty-64 kernel: [   45.453031] device aClient-eth0 entered promiscuous mode

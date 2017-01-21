@@ -1,0 +1,6 @@
+set terminal pdf color font "Times,11"
+set terminal pdf size 8.45cm,2cm
+
+set lmargin 9
+
+set output "figures/perf-barcode-voip-tcph-zoom.pdf"

@@ -1,0 +1,468 @@
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Initializing cgroup subsys cpuset
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Initializing cgroup subsys cpu
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Initializing cgroup subsys cpuacct
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Linux version 3.18.34-hollywood-g0bb4a643-dirty (smcquistin@hollywoodu) (gcc version 4.9.4 (Ubuntu 4.9.4-2ubuntu1~14.04.1) ) #12 SMP Fri Jan 20 22:13:36 GMT 2017
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.18.34-hollywood-g0bb4a643-dirty root=UUID=7db88945-f944-4bef-9250-765429be9bb5 ro splash quiet vt.handoff=7
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] e820: BIOS-provided physical RAM map:
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] NX (Execute Disable) protection: active
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] SMBIOS 2.5 present.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Hypervisor detected: KVM
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] AGP: No AGP bridge found
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] e820: last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] MTRR default type: uncachable
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] MTRR variable ranges disabled:
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] CPU MTRRs all blank - virtualized system.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffff88000009fff0]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Base memory trampoline at [ffff880000099000] 99000 size 24576
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] init_memory_mapping: [mem 0x00000000-0x000fffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [mem 0x00000000-0x000fffff] page 4k
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BRK [0x01fdd000, 0x01fddfff] PGTABLE
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BRK [0x01fde000, 0x01fdefff] PGTABLE
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BRK [0x01fdf000, 0x01fdffff] PGTABLE
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] init_memory_mapping: [mem 0x7fc00000-0x7fdfffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [mem 0x7fc00000-0x7fdfffff] page 2M
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BRK [0x01fe0000, 0x01fe0fff] PGTABLE
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] init_memory_mapping: [mem 0x7c000000-0x7fbfffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [mem 0x7c000000-0x7fbfffff] page 2M
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] init_memory_mapping: [mem 0x00100000-0x7bffffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [mem 0x00100000-0x001fffff] page 4k
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [mem 0x00200000-0x7bffffff] page 2M
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] init_memory_mapping: [mem 0x7fe00000-0x7ffeffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [mem 0x7fe00000-0x7ffeffff] page 4k
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] BRK [0x01fe1000, 0x01fe1fff] PGTABLE
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] RAMDISK: [mem 0x35fb4000-0x36fd1fff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: Early table checksum verification disabled
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: DSDT 0x000000007FFF0470 001CEB (v01 VBOX   VBOXBIOS 00000002 INTL 20100528)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: FACS 0x000000007FFF0200 000040
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: APIC 0x000000007FFF0240 00005C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: SSDT 0x000000007FFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] No NUMA configuration found
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] NODE_DATA(0) allocated [mem 0x7ffc9000-0x7ffeffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] kvm-clock: cpu 0, msr 0:7ff49001, primary cpu clock
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]  [ffffea0000000000-ffffea0001ffffff] PMD -> [ffff88007d600000-ffff88007f5fffff] on node 0
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Zone ranges:
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   Normal   empty
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Movable zone start for each node
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Early memory node ranges
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   node   0: [mem 0x00001000-0x0009efff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   node   0: [mem 0x00100000-0x7ffeffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Initmem setup node 0 [mem 0x00001000-0x7ffeffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] On node 0 totalpages: 524174
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA zone: 64 pages used for memmap
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA zone: 21 pages reserved
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA zone: 3998 pages, LIFO batch:0
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA32 zone: 8128 pages used for memmap
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000]   DMA32 zone: 520176 pages, LIFO batch:31
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: PM-Timer IO Port: 0x4008
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: Local APIC address 0xfee00000
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x01] enabled)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: IOAPIC (id[0x02] address[0xfec00000] gsi_base[0])
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] IOAPIC[0]: apic_id 2, version 17, address 0xfec00000, GSI 0-23
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: IRQ0 used by override.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] ACPI: IRQ9 used by override.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Using ACPI (MADT) for SMP configuration information
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] smpboot: Allowing 2 CPUs, 0 hotplug CPUs
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] e820: [mem 0x80000000-0xfffbffff] available for PCI devices
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Booting paravirtualized kernel on KVM
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] PERCPU: Embedded 30 pages/cpu @ffff88007fc00000 s83584 r8192 d31104 u1048576
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] pcpu-alloc: s83584 r8192 d31104 u1048576 alloc=1*2097152
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] pcpu-alloc: [0] 0 1 
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 515961
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Policy zone: DMA32
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.18.34-hollywood-g0bb4a643-dirty root=UUID=7db88945-f944-4bef-9250-765429be9bb5 ro splash quiet vt.handoff=7
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] xsave: enabled xstate_bv 0x7, cntxt size 0x340 using standard form
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] AGP: Checking aperture...
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] AGP: No AGP bridge found
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Memory: 2029908K/2096696K available (6634K kernel code, 1487K rwdata, 3180K rodata, 1728K init, 3164K bss, 66788K reserved)
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Hierarchical RCU implementation.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=2.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=2
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] NR_IRQS:524544 nr_irqs:440 0
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] 	Offload RCU callbacks from all CPUs
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] 	Offload RCU callbacks from CPUs: 0-1.
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] Console: colour dummy device 80x25
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] console [tty0] enabled
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] allocated 8388608 bytes of page_cgroup
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Jan 21 11:03:12 hollywoodu kernel: [    0.000000] tsc: Detected 2400.000 MHz processor
+Jan 21 11:03:12 hollywoodu kernel: [  310.764616] Calibrating delay loop (skipped) preset value.. 4800.00 BogoMIPS (lpj=2400000)
+Jan 21 11:03:12 hollywoodu kernel: [  310.764618] pid_max: default: 32768 minimum: 301
+Jan 21 11:03:12 hollywoodu kernel: [  310.764625] ACPI: Core revision 20140926
+Jan 21 11:03:12 hollywoodu kernel: [  310.765754] ACPI: All ACPI Tables successfully acquired
+Jan 21 11:03:12 hollywoodu kernel: [  310.765779] Security Framework initialized
+Jan 21 11:03:12 hollywoodu kernel: [  310.765785] SELinux:  Initializing.
+Jan 21 11:03:12 hollywoodu kernel: [  310.765791] SELinux:  Starting in permissive mode
+Jan 21 11:03:12 hollywoodu kernel: [  310.766219] Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  310.766539] Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  310.766672] Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  310.766674] Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  310.766814] Initializing cgroup subsys memory
+Jan 21 11:03:12 hollywoodu kernel: [  310.766818] Initializing cgroup subsys devices
+Jan 21 11:03:12 hollywoodu kernel: [  310.766820] Initializing cgroup subsys freezer
+Jan 21 11:03:12 hollywoodu kernel: [  310.766822] Initializing cgroup subsys net_cls
+Jan 21 11:03:12 hollywoodu kernel: [  310.766824] Initializing cgroup subsys blkio
+Jan 21 11:03:12 hollywoodu kernel: [  310.766825] Initializing cgroup subsys perf_event
+Jan 21 11:03:12 hollywoodu kernel: [  310.766827] Initializing cgroup subsys hugetlb
+Jan 21 11:03:12 hollywoodu kernel: [  310.766897] CPU: Physical Processor ID: 0
+Jan 21 11:03:12 hollywoodu kernel: [  310.766898] CPU: Processor Core ID: 0
+Jan 21 11:03:12 hollywoodu kernel: [  310.767900] mce: CPU supports 0 MCE banks
+Jan 21 11:03:12 hollywoodu kernel: [  310.767928] Last level iTLB entries: 4KB 1024, 2MB 1024, 4MB 1024
+Jan 21 11:03:12 hollywoodu kernel: [  310.767928] Last level dTLB entries: 4KB 1024, 2MB 1024, 4MB 1024, 1GB 4
+Jan 21 11:03:12 hollywoodu kernel: [  310.768218] Freeing SMP alternatives memory: 28K (ffffffff81cbd000 - ffffffff81cc4000)
+Jan 21 11:03:12 hollywoodu kernel: [  310.774305] ftrace: allocating 25407 entries in 100 pages
+Jan 21 11:03:12 hollywoodu kernel: [  310.813320] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Jan 21 11:03:12 hollywoodu kernel: [  310.813323] smpboot: CPU0: Intel(R) Core(TM) i5-4258U CPU @ 2.40GHz (fam: 06, model: 45, stepping: 01)
+Jan 21 11:03:12 hollywoodu kernel: [  310.914213] Performance Events: unsupported p6 CPU model 69 no PMU driver, software events only.
+Jan 21 11:03:12 hollywoodu kernel: [  310.922394] KVM setup paravirtual spinlock
+Jan 21 11:03:12 hollywoodu kernel: [  310.923444] NMI watchdog: disabled (cpu0): hardware events not enabled
+Jan 21 11:03:12 hollywoodu kernel: [  310.923524] x86: Booting SMP configuration:
+Jan 21 11:03:12 hollywoodu kernel: [  310.923525] .... node  #0, CPUs:      #1
+Jan 21 11:03:12 hollywoodu kernel: [  310.934824] kvm-clock: cpu 1, msr 0:7ff49041, secondary cpu clock
+Jan 21 11:03:12 hollywoodu kernel: [  310.935848] mce: CPU supports 0 MCE banks
+Jan 21 11:03:12 hollywoodu kernel: [  310.938012] x86: Booted up 1 node, 2 CPUs
+Jan 21 11:03:12 hollywoodu kernel: [  310.938027] smpboot: Total of 2 processors activated (9600.00 BogoMIPS)
+Jan 21 11:03:12 hollywoodu kernel: [  310.938914] devtmpfs: initialized
+Jan 21 11:03:12 hollywoodu kernel: [  310.940386] evm: security.selinux
+Jan 21 11:03:12 hollywoodu kernel: [  310.940387] evm: security.ima
+Jan 21 11:03:12 hollywoodu kernel: [  310.940388] evm: security.capability
+Jan 21 11:03:12 hollywoodu kernel: [  310.941474] atomic64_test: passed for x86-64 platform with CX8 and with SSE
+Jan 21 11:03:12 hollywoodu kernel: [  310.941477] pinctrl core: initialized pinctrl subsystem
+Jan 21 11:03:12 hollywoodu kernel: [  310.941683] NET: Registered protocol family 16
+Jan 21 11:03:12 hollywoodu kernel: [  310.944324] cpuidle: using governor menu
+Jan 21 11:03:12 hollywoodu kernel: [  310.944413] ACPI: bus type PCI registered
+Jan 21 11:03:12 hollywoodu kernel: [  310.944415] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Jan 21 11:03:12 hollywoodu kernel: [  310.944548] PCI: Using configuration type 1 for base access
+Jan 21 11:03:12 hollywoodu kernel: [  310.950507] ACPI: Added _OSI(Module Device)
+Jan 21 11:03:12 hollywoodu kernel: [  310.950510] ACPI: Added _OSI(Processor Device)
+Jan 21 11:03:12 hollywoodu kernel: [  310.950511] ACPI: Added _OSI(3.0 _SCP Extensions)
+Jan 21 11:03:12 hollywoodu kernel: [  310.950512] ACPI: Added _OSI(Processor Aggregator Device)
+Jan 21 11:03:12 hollywoodu kernel: [  310.951446] ACPI: Executed 1 blocks of module-level executable AML code
+Jan 21 11:03:12 hollywoodu kernel: [  310.953256] ACPI: Interpreter enabled
+Jan 21 11:03:12 hollywoodu kernel: [  310.953260] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S1_] (20140926/hwxface-580)
+Jan 21 11:03:12 hollywoodu kernel: [  310.953263] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S2_] (20140926/hwxface-580)
+Jan 21 11:03:12 hollywoodu kernel: [  310.953266] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S3_] (20140926/hwxface-580)
+Jan 21 11:03:12 hollywoodu kernel: [  310.953268] ACPI Exception: AE_NOT_FOUND, While evaluating Sleep State [\_S4_] (20140926/hwxface-580)
+Jan 21 11:03:12 hollywoodu kernel: [  310.953273] ACPI: (supports S0 S5)
+Jan 21 11:03:12 hollywoodu kernel: [  310.953274] ACPI: Using IOAPIC for interrupt routing
+Jan 21 11:03:12 hollywoodu kernel: [  310.953404] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Jan 21 11:03:12 hollywoodu kernel: [  310.955863] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Jan 21 11:03:12 hollywoodu kernel: [  310.955868] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+Jan 21 11:03:12 hollywoodu kernel: [  310.955872] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Jan 21 11:03:12 hollywoodu kernel: [  310.955939] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Jan 21 11:03:12 hollywoodu kernel: [  310.956147] PCI host bridge to bus 0000:00
+Jan 21 11:03:12 hollywoodu kernel: [  310.956150] pci_bus 0000:00: root bus resource [bus 00-ff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.956152] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7]
+Jan 21 11:03:12 hollywoodu kernel: [  310.956153] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.956155] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.956156] pci_bus 0000:00: root bus resource [mem 0x80000000-0xffdfffff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.956196] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Jan 21 11:03:12 hollywoodu kernel: [  310.956647] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Jan 21 11:03:12 hollywoodu kernel: [  310.957252] pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Jan 21 11:03:12 hollywoodu kernel: [  310.957613] pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Jan 21 11:03:12 hollywoodu kernel: [  310.957770] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Jan 21 11:03:12 hollywoodu kernel: [  310.957771] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Jan 21 11:03:12 hollywoodu kernel: [  310.957772] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Jan 21 11:03:12 hollywoodu kernel: [  310.957774] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Jan 21 11:03:12 hollywoodu kernel: [  310.957954] pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
+Jan 21 11:03:12 hollywoodu kernel: [  310.959627] pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe0ffffff pref]
+Jan 21 11:03:12 hollywoodu kernel: [  310.969746] pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Jan 21 11:03:12 hollywoodu kernel: [  310.971149] pci 0000:00:03.0: reg 0x10: [mem 0xf0000000-0xf001ffff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.973707] pci 0000:00:03.0: reg 0x18: [io  0xd010-0xd017]
+Jan 21 11:03:12 hollywoodu kernel: [  310.979567] pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Jan 21 11:03:12 hollywoodu kernel: [  310.980916] pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
+Jan 21 11:03:12 hollywoodu kernel: [  310.982193] pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.983636] pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Jan 21 11:03:12 hollywoodu kernel: [  310.988902] pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Jan 21 11:03:12 hollywoodu kernel: [  310.988998] pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.989062] pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Jan 21 11:03:12 hollywoodu kernel: [  310.989591] pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Jan 21 11:03:12 hollywoodu kernel: [  310.990920] pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Jan 21 11:03:12 hollywoodu kernel: [  310.998620] pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Jan 21 11:03:12 hollywoodu kernel: [  310.999700] pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Jan 21 11:03:12 hollywoodu kernel: [  311.001394] pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Jan 21 11:03:12 hollywoodu kernel: [  311.004004] pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Jan 21 11:03:12 hollywoodu kernel: [  311.006646] pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Jan 21 11:03:12 hollywoodu kernel: [  311.008059] pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Jan 21 11:03:12 hollywoodu kernel: [  311.011104] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Jan 21 11:03:12 hollywoodu kernel: [  311.011321] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 *11)
+Jan 21 11:03:12 hollywoodu kernel: [  311.011407] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 *10 11)
+Jan 21 11:03:12 hollywoodu kernel: [  311.011492] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 *9 10 11)
+Jan 21 11:03:12 hollywoodu kernel: [  311.011634] ACPI: Enabled 2 GPEs in block 00 to 07
+Jan 21 11:03:12 hollywoodu kernel: [  311.011982] vgaarb: setting as boot device: PCI:0000:00:02.0
+Jan 21 11:03:12 hollywoodu kernel: [  311.011985] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+Jan 21 11:03:12 hollywoodu kernel: [  311.011987] vgaarb: loaded
+Jan 21 11:03:12 hollywoodu kernel: [  311.011988] vgaarb: bridge control possible 0000:00:02.0
+Jan 21 11:03:12 hollywoodu kernel: [  311.012085] SCSI subsystem initialized
+Jan 21 11:03:12 hollywoodu kernel: [  311.012116] ACPI: bus type USB registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.012138] usbcore: registered new interface driver usbfs
+Jan 21 11:03:12 hollywoodu kernel: [  311.012148] usbcore: registered new interface driver hub
+Jan 21 11:03:12 hollywoodu kernel: [  311.012182] usbcore: registered new device driver usb
+Jan 21 11:03:12 hollywoodu kernel: [  311.012447] PCI: Using ACPI for IRQ routing
+Jan 21 11:03:12 hollywoodu kernel: [  311.012450] PCI: pci_cache_line_size set to 64 bytes
+Jan 21 11:03:12 hollywoodu kernel: [  311.012656] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Jan 21 11:03:12 hollywoodu kernel: [  311.012661] e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+Jan 21 11:03:12 hollywoodu kernel: [  311.012783] NetLabel: Initializing
+Jan 21 11:03:12 hollywoodu kernel: [  311.012784] NetLabel:  domain hash size = 128
+Jan 21 11:03:12 hollywoodu kernel: [  311.012785] NetLabel:  protocols = UNLABELED CIPSOv4
+Jan 21 11:03:12 hollywoodu kernel: [  311.012798] NetLabel:  unlabeled traffic allowed by default
+Jan 21 11:03:12 hollywoodu kernel: [  311.012909] Switched to clocksource kvm-clock
+Jan 21 11:03:12 hollywoodu kernel: [  311.018817] pnp: PnP ACPI init
+Jan 21 11:03:12 hollywoodu kernel: [  311.018924] pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Jan 21 11:03:12 hollywoodu kernel: [  311.019015] pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Jan 21 11:03:12 hollywoodu kernel: [  311.019739] pnp: PnP ACPI: found 2 devices
+Jan 21 11:03:12 hollywoodu kernel: [  311.035447] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7]
+Jan 21 11:03:12 hollywoodu kernel: [  311.035450] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff]
+Jan 21 11:03:12 hollywoodu kernel: [  311.035466] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff]
+Jan 21 11:03:12 hollywoodu kernel: [  311.035468] pci_bus 0000:00: resource 7 [mem 0x80000000-0xffdfffff]
+Jan 21 11:03:12 hollywoodu kernel: [  311.035513] NET: Registered protocol family 2
+Jan 21 11:03:12 hollywoodu kernel: [  311.035833] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  311.035873] TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  311.035921] TCP: Hash tables configured (established 16384 bind 16384)
+Jan 21 11:03:12 hollywoodu kernel: [  311.036292] TCP: reno registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.036303] UDP hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  311.036313] UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  311.036383] NET: Registered protocol family 1
+Jan 21 11:03:12 hollywoodu kernel: [  311.036404] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Jan 21 11:03:12 hollywoodu kernel: [  311.036446] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Jan 21 11:03:12 hollywoodu kernel: [  311.036481] pci 0000:00:02.0: Video device with shadowed ROM
+Jan 21 11:03:12 hollywoodu kernel: [  311.037864] PCI: CLS 0 bytes, default 64
+Jan 21 11:03:12 hollywoodu kernel: [  311.037995] Unpacking initramfs...
+Jan 21 11:03:12 hollywoodu kernel: [  311.285161] Freeing initrd memory: 16504K (ffff880035fb4000 - ffff880036fd2000)
+Jan 21 11:03:12 hollywoodu kernel: [  311.285363] platform rtc_cmos: registered platform RTC device (no PNP device found)
+Jan 21 11:03:12 hollywoodu kernel: [  311.285526] RAPL PMU detected, hw unit 2^-0 Joules, API unit is 2^-32 Joules, 4 fixed counters 10737418240 ms ovfl timer
+Jan 21 11:03:12 hollywoodu kernel: [  311.285551] microcode: CPU0 sig=0x40651, pf=0x40, revision=0x0
+Jan 21 11:03:12 hollywoodu kernel: [  311.285614] microcode: CPU1 sig=0x40651, pf=0x40, revision=0x0
+Jan 21 11:03:12 hollywoodu kernel: [  311.285712] microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+Jan 21 11:03:12 hollywoodu kernel: [  311.286038] sha1_ssse3: Using AVX optimized SHA-1 implementation
+Jan 21 11:03:12 hollywoodu kernel: [  311.286219] sha256_ssse3: Using AVX optimized SHA-256 implementation
+Jan 21 11:03:12 hollywoodu kernel: [  311.286871] futex hash table entries: 512 (order: 3, 32768 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  311.286917] Initialise system trusted keyring
+Jan 21 11:03:12 hollywoodu kernel: [  311.286944] audit: initializing netlink subsys (disabled)
+Jan 21 11:03:12 hollywoodu kernel: [  311.286966] audit: type=2000 audit(1484996892.218:1): initialized
+Jan 21 11:03:12 hollywoodu kernel: [  311.287401] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Jan 21 11:03:12 hollywoodu kernel: [  311.288594] zpool: loaded
+Jan 21 11:03:12 hollywoodu kernel: [  311.288597] zbud: loaded
+Jan 21 11:03:12 hollywoodu kernel: [  311.288989] VFS: Disk quotas dquot_6.5.2
+Jan 21 11:03:12 hollywoodu kernel: [  311.289017] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Jan 21 11:03:12 hollywoodu kernel: [  311.289112] msgmni has been set to 3996
+Jan 21 11:03:12 hollywoodu kernel: [  311.289153] Key type big_key registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.289155] SELinux:  Registering netfilter hooks
+Jan 21 11:03:12 hollywoodu kernel: [  311.292714] alg: No test for stdrng (krng)
+Jan 21 11:03:12 hollywoodu kernel: [  311.292722] NET: Registered protocol family 38
+Jan 21 11:03:12 hollywoodu kernel: [  311.292728] Key type asymmetric registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.292731] Asymmetric key parser 'x509' registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.292769] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+Jan 21 11:03:12 hollywoodu kernel: [  311.292945] io scheduler noop registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.292949] io scheduler deadline registered (default)
+Jan 21 11:03:12 hollywoodu kernel: [  311.292982] io scheduler cfq registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.293074] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Jan 21 11:03:12 hollywoodu kernel: [  311.293087] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+Jan 21 11:03:12 hollywoodu kernel: [  311.293122] vesafb: mode is 640x480x32, linelength=2560, pages=0
+Jan 21 11:03:12 hollywoodu kernel: [  311.293123] vesafb: scrolling: redraw
+Jan 21 11:03:12 hollywoodu kernel: [  311.293125] vesafb: Truecolor: size=8:8:8:8, shift=24:16:8:0
+Jan 21 11:03:12 hollywoodu kernel: [  311.293134] vesafb: framebuffer at 0xe0000000, mapped to 0xffffc90000400000, using 1216k, total 1216k
+Jan 21 11:03:12 hollywoodu kernel: [  311.294528] Console: switching to colour frame buffer device 80x30
+Jan 21 11:03:12 hollywoodu kernel: [  311.295388] fb0: VESA VGA frame buffer device
+Jan 21 11:03:12 hollywoodu kernel: [  311.295423] intel_idle: does not run on family 6 model 69
+Jan 21 11:03:12 hollywoodu kernel: [  311.295967] ACPI: AC Adapter [AC] (off-line)
+Jan 21 11:03:12 hollywoodu kernel: [  311.296047] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Jan 21 11:03:12 hollywoodu kernel: [  311.296051] ACPI: Power Button [PWRF]
+Jan 21 11:03:12 hollywoodu kernel: [  311.296424] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Jan 21 11:03:12 hollywoodu kernel: [  311.296427] ACPI: Sleep Button [SLPF]
+Jan 21 11:03:12 hollywoodu kernel: [  311.296682] GHES: HEST is not enabled!
+Jan 21 11:03:12 hollywoodu kernel: [  311.296748] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Jan 21 11:03:12 hollywoodu kernel: [  311.297124] Non-volatile memory driver v1.3
+Jan 21 11:03:12 hollywoodu kernel: [  311.297128] Linux agpgart interface v0.103
+Jan 21 11:03:12 hollywoodu kernel: [  311.297239] rdac: device handler registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.297649] ACPI: Battery Slot [BAT0] (battery present)
+Jan 21 11:03:12 hollywoodu kernel: [  311.297754] hp_sw: device handler registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.297759] emc: device handler registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.297761] alua: device handler registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.297796] libphy: Fixed MDIO Bus: probed
+Jan 21 11:03:12 hollywoodu kernel: [  311.297849] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Jan 21 11:03:12 hollywoodu kernel: [  311.297854] ehci-pci: EHCI PCI platform driver
+Jan 21 11:03:12 hollywoodu kernel: [  311.297862] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Jan 21 11:03:12 hollywoodu kernel: [  311.297865] ohci-pci: OHCI PCI platform driver
+Jan 21 11:03:12 hollywoodu kernel: [  311.298384] ohci-pci 0000:00:06.0: OHCI PCI host controller
+Jan 21 11:03:12 hollywoodu kernel: [  311.298416] ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Jan 21 11:03:12 hollywoodu kernel: [  311.298480] ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Jan 21 11:03:12 hollywoodu kernel: [  311.349624] usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+Jan 21 11:03:12 hollywoodu kernel: [  311.349630] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Jan 21 11:03:12 hollywoodu kernel: [  311.349633] usb usb1: Product: OHCI PCI host controller
+Jan 21 11:03:12 hollywoodu kernel: [  311.349636] usb usb1: Manufacturer: Linux 3.18.34-hollywood-g0bb4a643-dirty ohci_hcd
+Jan 21 11:03:12 hollywoodu kernel: [  311.349638] usb usb1: SerialNumber: 0000:00:06.0
+Jan 21 11:03:12 hollywoodu kernel: [  311.349852] hub 1-0:1.0: USB hub found
+Jan 21 11:03:12 hollywoodu kernel: [  311.349880] hub 1-0:1.0: 12 ports detected
+Jan 21 11:03:12 hollywoodu kernel: [  311.350533] uhci_hcd: USB Universal Host Controller Interface driver
+Jan 21 11:03:12 hollywoodu kernel: [  311.350605] usbcore: registered new interface driver usbserial
+Jan 21 11:03:12 hollywoodu kernel: [  311.350614] usbcore: registered new interface driver usbserial_generic
+Jan 21 11:03:12 hollywoodu kernel: [  311.350634] usbserial: USB Serial support registered for generic
+Jan 21 11:03:12 hollywoodu kernel: [  311.350794] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Jan 21 11:03:12 hollywoodu kernel: [  311.351414] serio: i8042 KBD port at 0x60,0x64 irq 1
+Jan 21 11:03:12 hollywoodu kernel: [  311.351422] serio: i8042 AUX port at 0x60,0x64 irq 12
+Jan 21 11:03:12 hollywoodu kernel: [  311.351720] mousedev: PS/2 mouse device common for all mice
+Jan 21 11:03:12 hollywoodu kernel: [  311.352436] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+Jan 21 11:03:12 hollywoodu kernel: [  311.354363] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+Jan 21 11:03:12 hollywoodu kernel: [  311.354428] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Jan 21 11:03:12 hollywoodu kernel: [  311.354509] hidraw: raw HID events driver (C) Jiri Kosina
+Jan 21 11:03:12 hollywoodu kernel: [  311.354611] usbcore: registered new interface driver usbhid
+Jan 21 11:03:12 hollywoodu kernel: [  311.354612] usbhid: USB HID core driver
+Jan 21 11:03:12 hollywoodu kernel: [  311.354660] drop_monitor: Initializing network drop monitor service
+Jan 21 11:03:12 hollywoodu kernel: [  311.354732] TCP: cubic registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.354762] Initializing XFRM netlink socket
+Jan 21 11:03:12 hollywoodu kernel: [  311.354872] NET: Registered protocol family 10
+Jan 21 11:03:12 hollywoodu kernel: [  311.355182] NET: Registered protocol family 17
+Jan 21 11:03:12 hollywoodu kernel: [  311.356250] Loading compiled-in X.509 certificates
+Jan 21 11:03:12 hollywoodu kernel: [  311.357013] Loaded X.509 cert 'Magrathea: Glacier signing key: 08c95b1340130f0476a581da118e91b22cb02706'
+Jan 21 11:03:12 hollywoodu kernel: [  311.357028] registered taskstats version 1
+Jan 21 11:03:12 hollywoodu kernel: [  311.360098] Key type trusted registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.364639] Key type encrypted registered
+Jan 21 11:03:12 hollywoodu kernel: [  311.364646] ima: No TPM chip found, activating TPM-bypass!
+Jan 21 11:03:12 hollywoodu kernel: [  311.364678] evm: HMAC attrs: 0x1
+Jan 21 11:03:12 hollywoodu kernel: [  311.365341] rtc_cmos rtc_cmos: setting system clock to 2017-01-21 11:02:58 UTC (1484996578)
+Jan 21 11:03:12 hollywoodu kernel: [  311.366333] Freeing unused kernel memory: 1728K (ffffffff81b0d000 - ffffffff81cbd000)
+Jan 21 11:03:12 hollywoodu kernel: [  311.390390] libata: module verification failed: signature and/or  required key missing - tainting kernel
+Jan 21 11:03:12 hollywoodu kernel: [  311.397479] libata version 3.00 loaded.
+Jan 21 11:03:12 hollywoodu kernel: [  311.398902] ahci 0000:00:0d.0: version 3.0
+Jan 21 11:03:12 hollywoodu kernel: [  311.400204] ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Jan 21 11:03:12 hollywoodu kernel: [  311.400419] ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Jan 21 11:03:12 hollywoodu kernel: [  311.400422] ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Jan 21 11:03:12 hollywoodu kernel: [  311.402283] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+Jan 21 11:03:12 hollywoodu kernel: [  311.402287] e1000: Copyright (c) 1999-2006 Intel Corporation.
+Jan 21 11:03:12 hollywoodu kernel: [  311.405500] scsi host0: ahci
+Jan 21 11:03:12 hollywoodu kernel: [  311.405575] ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Jan 21 11:03:12 hollywoodu kernel: [  311.405655] ata_piix 0000:00:01.1: version 2.13
+Jan 21 11:03:12 hollywoodu kernel: [  311.408481] scsi host1: ata_piix
+Jan 21 11:03:12 hollywoodu kernel: [  311.411756] scsi host2: ata_piix
+Jan 21 11:03:12 hollywoodu kernel: [  311.411807] ata2: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Jan 21 11:03:12 hollywoodu kernel: [  311.411809] ata3: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Jan 21 11:03:12 hollywoodu kernel: [  311.564272] ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Jan 21 11:03:12 hollywoodu kernel: [  311.564682] ata3.00: configured for UDMA/33
+Jan 21 11:03:12 hollywoodu kernel: [  311.711079] ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Jan 21 11:03:12 hollywoodu kernel: [  311.711224] ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Jan 21 11:03:12 hollywoodu kernel: [  311.711226] ata1.00: 40960000 sectors, multi 128: LBA48 NCQ (depth 31/32)
+Jan 21 11:03:12 hollywoodu kernel: [  311.711559] ata1.00: configured for UDMA/133
+Jan 21 11:03:12 hollywoodu kernel: [  311.712084] scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Jan 21 11:03:12 hollywoodu kernel: [  311.712812] scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Jan 21 11:03:12 hollywoodu kernel: [  311.718030] usb 1-1: new full-speed USB device number 2 using ohci-pci
+Jan 21 11:03:12 hollywoodu kernel: [  311.719144] sd 0:0:0:0: [sda] 40960000 512-byte logical blocks: (20.9 GB/19.5 GiB)
+Jan 21 11:03:12 hollywoodu kernel: [  311.719165] sd 0:0:0:0: [sda] Write Protect is off
+Jan 21 11:03:12 hollywoodu kernel: [  311.719166] sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Jan 21 11:03:12 hollywoodu kernel: [  311.719175] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Jan 21 11:03:12 hollywoodu kernel: [  311.723019]  sda: sda1 sda2 < sda5 >
+Jan 21 11:03:12 hollywoodu kernel: [  311.723284] sd 0:0:0:0: [sda] Attached SCSI disk
+Jan 21 11:03:12 hollywoodu kernel: [  311.751414] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+Jan 21 11:03:12 hollywoodu kernel: [  311.781173] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:d6:95:ff
+Jan 21 11:03:12 hollywoodu kernel: [  311.781181] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Jan 21 11:03:12 hollywoodu kernel: [  311.797962] sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Jan 21 11:03:12 hollywoodu kernel: [  311.797966] cdrom: Uniform CD-ROM driver Revision: 3.20
+Jan 21 11:03:12 hollywoodu kernel: [  311.798248] sr 2:0:0:0: Attached scsi CD-ROM sr0
+Jan 21 11:03:12 hollywoodu kernel: [  311.927651] usb 1-1: New USB device found, idVendor=80ee, idProduct=0021
+Jan 21 11:03:12 hollywoodu kernel: [  311.927654] usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Jan 21 11:03:12 hollywoodu kernel: [  311.927656] usb 1-1: Product: USB Tablet
+Jan 21 11:03:12 hollywoodu kernel: [  311.927658] usb 1-1: Manufacturer: VirtualBox
+Jan 21 11:03:12 hollywoodu kernel: [  311.937501] input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input5
+Jan 21 11:03:12 hollywoodu kernel: [  311.937588] hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Jan 21 11:03:12 hollywoodu kernel: [  312.287451] tsc: Refined TSC clocksource calibration: 2398.374 MHz
+Jan 21 11:03:12 hollywoodu kernel: [  314.426208] floppy0: no floppy controllers found
+Jan 21 11:03:12 hollywoodu kernel: [  314.426246] work still pending
+Jan 21 11:03:12 hollywoodu kernel: [  317.093493] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
+Jan 21 11:03:12 hollywoodu kernel: [  317.093496] EXT4-fs (sda1): write access will be enabled during recovery
+Jan 21 11:03:12 hollywoodu kernel: [  318.534474] EXT4-fs (sda1): recovery complete
+Jan 21 11:03:12 hollywoodu kernel: [  318.537222] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+Jan 21 11:03:12 hollywoodu kernel: [  318.724016] random: nonblocking pool is initialized
+Jan 21 11:03:12 hollywoodu kernel: [  324.977025] EXT4-fs (sda1): re-mounted. Opts: errors=remount-ro
+Jan 21 11:03:12 hollywoodu kernel: [  324.999112] lp: driver loaded but no devices found
+Jan 21 11:03:12 hollywoodu kernel: [  325.029099] ppdev: user-space parallel port driver
+Jan 21 11:03:12 hollywoodu kernel: [  325.036041] ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Jan 21 11:03:12 hollywoodu kernel: [  325.036135] input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input6
+Jan 21 11:03:12 hollywoodu kernel: [  325.042104] fuse init (API version 7.23)
+Jan 21 11:03:12 hollywoodu kernel: [  325.105281] piix4_smbus 0000:00:07.0: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Jan 21 11:03:12 hollywoodu kernel: [  325.205323] AVX version of gcm_enc/dec engaged.
+Jan 21 11:03:12 hollywoodu kernel: [  325.205325] AES CTR mode by8 optimization enabled
+Jan 21 11:03:12 hollywoodu kernel: [  325.322116] alg: No test for __gcm-aes-aesni (__driver-gcm-aes-aesni)
+Jan 21 11:03:12 hollywoodu kernel: [  325.400553] alg: No test for crc32 (crc32-pclmul)
+Jan 21 11:03:12 hollywoodu kernel: [  325.459075] intel_rapl: no valid rapl domains found in package 0
+Jan 21 11:03:12 hollywoodu kernel: [  325.619396] Bluetooth: Core ver 2.19
+Jan 21 11:03:12 hollywoodu kernel: [  325.619411] NET: Registered protocol family 31
+Jan 21 11:03:12 hollywoodu kernel: [  325.619413] Bluetooth: HCI device and connection manager initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.619420] Bluetooth: HCI socket layer initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.619422] Bluetooth: L2CAP socket layer initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.619430] Bluetooth: SCO socket layer initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.628101] snd_intel8x0 0000:00:05.0: disable (unknown or VT-d) VM optimization
+Jan 21 11:03:12 hollywoodu kernel: [  325.644517] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Jan 21 11:03:12 hollywoodu kernel: [  325.644520] Bluetooth: BNEP filters: protocol multicast
+Jan 21 11:03:12 hollywoodu kernel: [  325.644527] Bluetooth: BNEP socket layer initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.654376] Bluetooth: RFCOMM TTY layer initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.654387] Bluetooth: RFCOMM socket layer initialized
+Jan 21 11:03:12 hollywoodu kernel: [  325.654393] Bluetooth: RFCOMM ver 1.11
+Jan 21 11:03:13 hollywoodu kernel: [  325.973596] snd_intel8x0 0000:00:05.0: white list rate for 1028:0177 is 48000
+Jan 21 11:03:13 hollywoodu kernel: [  326.126985] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+Jan 21 11:03:13 hollywoodu kernel: [  326.127649] e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Jan 21 11:03:13 hollywoodu kernel: [  326.128086] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+Jan 21 11:03:13 hollywoodu kernel: [  326.290930] gre: GRE over IPv4 demultiplexor driver
+Jan 21 11:03:13 hollywoodu kernel: [  326.292532] geneve: Geneve driver
+Jan 21 11:03:13 hollywoodu kernel: [  326.297979] openvswitch: Open vSwitch switching datapath
+Jan 21 11:03:14 hollywoodu kernel: [  327.116354] cgroup: systemd-logind (614) created nested cgroup for controller "memory" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+Jan 21 11:03:14 hollywoodu kernel: [  327.116357] cgroup: "memory" requires setting use_hierarchy to 1 on the root
+Jan 21 11:03:15 hollywoodu kernel: [  328.071744] floppy0: no floppy controllers found
+Jan 21 11:03:15 hollywoodu kernel: [  328.071784] work still pending
+Jan 21 11:03:53 hollywoodu kernel: [  365.867640] IPv6: ADDRCONF(NETDEV_UP): switch1-eth1: link is not ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.873823] IPv6: ADDRCONF(NETDEV_CHANGE): switch1-eth1: link becomes ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.908434] IPv6: ADDRCONF(NETDEV_UP): switch2-eth1: link is not ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.913123] IPv6: ADDRCONF(NETDEV_CHANGE): switch2-eth1: link becomes ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.940766] IPv6: ADDRCONF(NETDEV_UP): switch1-eth2: link is not ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.956269] IPv6: ADDRCONF(NETDEV_CHANGE): switch1-eth2: link becomes ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.990302] IPv6: ADDRCONF(NETDEV_UP): switch2-eth2: link is not ready
+Jan 21 11:03:53 hollywoodu kernel: [  365.993630] IPv6: ADDRCONF(NETDEV_CHANGE): switch2-eth2: link becomes ready
+Jan 21 11:03:53 hollywoodu kernel: [  366.047400] IPv6: ADDRCONF(NETDEV_UP): switch2-eth3: link is not ready
+Jan 21 11:03:53 hollywoodu kernel: [  366.052856] IPv6: ADDRCONF(NETDEV_CHANGE): switch2-eth3: link becomes ready
+Jan 21 11:03:53 hollywoodu kernel: [  366.149655] netem: version 1.3
+Jan 21 11:03:53 hollywoodu kernel: [  366.264200] device ovs-system entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.272606] device switch2-eth2 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.275926] device switch2 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.276511] device switch2-eth3 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.299185] device switch2-eth1 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.300410] device switch1-eth2 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.300524] device switch1-eth1 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.304698] device switch1 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.305008] device switch1-eth3 entered promiscuous mode
+Jan 21 11:03:53 hollywoodu kernel: [  366.311970] htb: netem qdisc 10: is non-work-conserving?
+Jan 21 11:03:53 hollywoodu kernel: [  366.374051] htb: netem qdisc 10: is non-work-conserving?
+Jan 21 11:03:53 hollywoodu kernel: [  366.382982] htb: netem qdisc 10: is non-work-conserving?
+Jan 21 11:03:53 hollywoodu kernel: [  366.792371] Hollywood: out-of-order delivery enabled
+Jan 21 11:03:53 hollywoodu kernel: [  366.792375] Hollywood: partial reliability disabled
+Jan 21 11:03:53 hollywoodu kernel: [  366.803382] Hollywood: out-of-order delivery disabled
+Jan 21 11:03:53 hollywoodu kernel: [  366.803388] Hollywood: partial reliability disabled
+Jan 21 11:03:54 hollywoodu kernel: [  366.969119] Netfilter messages via NETLINK v0.30.
+Jan 21 11:03:54 hollywoodu kernel: [  367.032555] device aClient-eth0 entered promiscuous mode
+Jan 21 11:03:54 hollywoodu kernel: [  367.035415] device aServer-eth0 entered promiscuous mode
+Jan 21 11:04:29 hollywoodu kernel: [  402.798218] htb: too many events!

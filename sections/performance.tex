@@ -1,0 +1,665 @@
+% !TEX root = ../utltcp-paper.tex
+
+In this section, we present initial performance evaluations. The primary goal 
+is to show that the analysis presented in Section \ref{sec:analysis} holds,
+while also showing that TCP Hollywood is useful for typical applications in realistic
+network conditions.
+We do this using the Mininet network emulator with a Linux implementation of TCP
+Hollywood, simulating scenarios that represent typical networked multimedia
+traffic from fixed-line residential networks.
+This not only allows us to validate our analysis, but also can also form the
+basis of future evaluation and deployment in the public Internet.
+
+
+Section \ref{sec:simulator} describes the setup of the simulator used in the performance
+evaluations, while Section \ref{sec:eval} discusses the parameters of the simulations,
+and presents their results.
+
+%--------------------------------------------------------------------------------------------------
+\subsection{Simulator Setup}
+\label{sec:simulator}
+
+We use Mininet configured to emulate a dumbbell topology with a single bottleneck.
+The bottleneck link of the dumbbell is an ADSL connection, with a download speed
+of 8Mbps, and an upload speed of 1Mbps. ADSL is simulated because its use remains
+widespread in large parts of the world, and is an environment where TCP Hollywood
+is likely to show some benefit. The round-trip time is varied to allow exploration
+of different behaviours, as will be discussed in Section \ref{sec:eval}.
+
+We run TCP Hollywood flows representing the application under test, sharing the
+bottleneck with cross-traffic. Three types of cross traffic are used:
+single \emph{long-lived TCP} flows representing bulk downloads,
+a bursty mix of short-lived TCP flows representing \emph{HTTP} traffic,
+and multiple TCP connection representing an adaptive video download using
+\emph{MPEG DASH}. Cross-traffic is used instead of a fixed random packet loss
+rate; simulating such a loss rate is difficult, given the variability of
+loss rates in the public Internet. Using different classes of typical cross
+traffic is preferred.  We use the same parameters for generating cross
+traffic for both protocols, but the simulations are non-deterministic so
+the exact traffic pattern varies.
+
+The Appendix further describes our choice of simulation parameters, the
+rationale for our choice of simulation environment, and our approach to
+ensuring reproducibility of results.
+
+%--------------------------------------------------------------------------------------------------
+\subsection{Evaluations}
+\label{sec:eval}
+
+In Section \ref{sec:analysis}, we showed how TCP and TCP Hollywood behaviour
+splits into three regions, based on combinations of round-trip times and
+play-out delays. In Figure \ref{diagram:inconsistentretrans}, these are
+the green shaded
+region, where TCP retransmissions are useful; the red shaded region, where TCP
+retransmissions are not useful, but inconsistent retransmissions may be
+beneficial; and finally, the unshaded region where no useful data can be
+delivered -- the application is operating outside of its latency bounds.
+
+\begin{figure}[t!]
+	\includegraphics[width=\columnwidth]{figures/analysis-voip-inconsistent_region.pdf}
+    \caption{Scenarios selected for VoIP application performance evaluations}
+   	\label{fig:analysis-voip}
+\end{figure}
+
+Figure \ref{fig:analysis-voip} plots the same diagram, parameterised for the
+Voice-over-IP application described in Section \ref{sec:analysis}, where
+160-byte messages are sent every 20ms, to simulate the G.711 codec.
+To validate the analysis, we simulate three scenarios using a round-trip time of
+20ms and varying play-out delays:
+(I) with play-out delay of
+150ms, out-with the maximum delay tolerated by the application. At (II), the play-out delay
+is 110ms; regular TCP and TCP Hollywood should provide the same timely goodput. At (III),
+the play-out delay is 60ms, where TCP Hollywood should provide an increase in timely
+goodput vs. standard TCP.
+For each network scenario, and cross-traffic class, we plot:
+\begin{itemize}
+\item \emph{Timely good-put}:
+                    TCP Hollywood is designed to improve performance by (i)
+                    removing head-of-line blocking to reduce
+                    latency; and (ii) introducing partial reliability to
+                    increase utility.  Application-layer
+                    latency (i.e., the time between the application sending
+                    and receiving a message) gives insight into the
+                    performance benefits, but fails to assess the trade-off
+                    that TCP Hollywood makes between reliability and
+                    timeliness.  Accordingly, we measure \emph{timely
+                    good-put}, the rate at which useful bytes arrive at
+                    the receiver. We define useful bytes as those that
+                    arrive in time to be played out by the multimedia
+                    application, with the correct timing to match the rest
+                    of the media stream, and that have not already been
+                    received.
+\item \emph{Playout}: State of message playout for standard TCP and TCP Hollywood.
+                    Messages that are successfully played out are shown in green; messages
+                    that have expired (i.e., exceeded their maximum time bound) before their
+                    play-out are shown in purple, and messages that arrived after their
+                    play-out time are shown in orange. This plot begins when play-out starts,
+                    removing the impact of the play-out buffer.
+\item \emph{Latency}: Per-message latency for standard TCP and TCP Hollywood.
+                    The latency of each message as it arrives at the application-layer is
+                    shown. The sending application sends the message with a timestamp,
+                    and the latency is determined at the receiver by comparing this to the
+                    current time. Since simulations are performed on a
+                    single host with Mininet, clocks are synchronised.
+\item \emph{Segments}: Segment arrival for standard TCP and TCP Hollywood.
+                    Segments that arrive in order are plotted in green. Segments that
+                    arrive out-of-order are plotted in orange. Segments that fill an
+                    earlier gap (i.e., retransmissions) are shown in purple. Segments that
+                    were sent as inconsistent retransmissions are shown in blue, and are
+                    additionally highlighted with marks on the border of the plot.
+\end{itemize}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Timely goodput}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario I: Timely goodput for standard TCP (Figure \ref{fig:voip-150-tcp}) and
+                          TCP Hollywood (Figure \ref{fig:voip-150-tcph})}
+\label{fig:voip-150-tg}
+\end{figure*}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario I: Play-out buffer, message latencies, and segment arrival plots for standard TCP}
+\label{fig:voip-150-tcp}
+\end{figure*}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-i-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-ii-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd150ms-iii-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario I: Play-out buffer, message latencies, and segment arrival plots for TCP Hollywood}
+\label{fig:voip-150-tcph}
+\end{figure*}
+
+The simulation results for Scenario I are shown in Figures \ref{fig:voip-150-tg},
+\ref{fig:voip-150-tcp}, and \ref{fig:voip-150-tcph}.
+There are three groups of results:
+Figure \ref{fig:voip-150-tg} shows timely goodput for both standard TCP and
+for TCP Hollywood competing with each of the three types of cross traffic.
+Figure \ref{fig:voip-150-tcp} shows, for standard TCP, and with each type
+of cross traffic, whether segments were played out on time (top), the per
+message latency as measured at the application layer (middle), and whether
+each segment was received, retransmitted, or inconsistently retransmitted
+(bottomw).
+Finally, Figure \ref{fig:voip-150-tcph}, plots the same information, but
+for TCP Hollywood.
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Timely goodput}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario II: Timely goodput for standard TCP (Figure \ref{fig:voip-110-tcp}) and
+                          TCP Hollywood (Figure \ref{fig:voip-110-tcph})}
+\label{fig:voip-110-tg}
+\end{figure*}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario II: Play-out buffer, message latencies, and segment arrival plots for standard TCP}
+\label{fig:voip-110-tcp}
+\end{figure*}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-i-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-ii-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd110ms-iii-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario II: Play-out buffer, message latencies, and segment arrival plots for TCP Hollywood}
+\label{fig:voip-110-tcph}
+\end{figure*}
+
+
+% ================
+
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Timely goodput}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tg.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario III: Timely goodput for standard TCP (Figure \ref{fig:voip-60-tcp}) and
+                          TCP Hollywood (Figure \ref{fig:voip-60-tcph})}
+\label{fig:voip-60-tg}
+\end{figure*}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tcp-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tcp-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tcp-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario III: Play-out buffer, message latencies, and segment arrival plots for standard TCP}
+\label{fig:voip-60-tcp}
+\end{figure*}
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[Long-lived TCP]{\parbox{66mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-i-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[HTTP]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-ii-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\subfloat[MPEG-DASH]{\parbox{61mm}{
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tcph-playout.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tcph-latency.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}
+\includegraphics[width=61mm]{figures/perf-voip-adsl-uk-pd60ms-iii-tcph-barcode.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{61mm}~\end{minipage}
+}}
+\caption{VoIP Scenario III: Play-out buffer, message latencies, and segment arrival plots for TCP Hollywood}
+\label{fig:voip-60-tcph}
+\end{figure*}
+
+In scenario I, the combination of a 150ms play-out delay and 10ms network
+delay (20ms RTT) is chosen such that the application is operating beyond
+its maximum one-way delay bound. That is, packets cannot arrive in time to
+meet the deadline, irrespective of whether standard TCP or TCP Hollywood
+are used. This is clear in the figures: the timely goodput (Figure
+\ref{fig:voip-150-tg}) is zero for both protocols, and the playout plots
+show all messages have expired.  Both standard TCP and TCP Hollywood behave
+as expected: playout in this scenario is not feasible for either protocol.
+
+The results for Scenario II are shown in Figures \ref{fig:voip-110-tg},
+\ref{fig:voip-110-tcp}, and \ref{fig:voip-110-tcph}.
+Figure \ref{fig:voip-110-tg} plots the timely goodput for both standard TCP
+and TCP Hollywood, while Figures \ref{fig:voip-110-tcp} and \ref{fig:voip-110-tcph} 
+show the playout of the segments, application-layer message latency, and
+segment arrivals for the two protocols. Each figure shows performance with
+each of the three types of cross traffic. 
+
+In this scenario, the playout delay is set to 110ms, chosen such that the
+combination of playout delay and network round-trip time allows
+retransmissions to arrive before the lost and retransmitted segment is 
+due to be played out. Accordingly, the performance of standard TCP and 
+TCP Hollywood should be comparable. We see this in the figures. While
+there is variation in the timely goodput (Figure \ref{fig:voip-110-tg}) 
+due to variations in the cross traffic, there is no significant difference
+between standard TCP and TCP Hollywood. The other metrics (Figures 
+\ref{fig:voip-110-tcp} and \ref{fig:voip-110-tcph}) are also comparable,
+although since the pattern of segment arrivals varies depending on the
+cross traffic, we see differences in instantaneous message latency and
+playout.
+
+
+\begin{figure*}[t!]
+\captionsetup[subfigure]{labelformat=empty}
+\subfloat[\hspace{5mm}(i) Standard TCP]{\parbox{96mm}{
+\begin{minipage}{5mm}
+\rotatebox{90}{Playout}
+\end{minipage}
+\begin{minipage}{91mm}
+\includegraphics[width=91mm]{figures/perf-playout-voip-tcp-zoom.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Message latency}
+\end{minipage}
+\begin{minipage}{91mm}
+\includegraphics[width=91mm]{figures/perf-latency-voip-tcp-zoom.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{5mm}
+\rotatebox{90}{Segments}
+\end{minipage}
+\begin{minipage}{91mm}
+\includegraphics[width=91mm]{figures/perf-barcode-voip-tcp-zoom.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{91mm}~\end{minipage}
+}}
+\subfloat[(ii) TCP Hollywood]{\parbox{91mm}{
+\begin{minipage}{91mm}
+\includegraphics[width=91mm]{figures/perf-playout-voip-tcph-zoom.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{91mm}
+\includegraphics[width=91mm]{figures/perf-latency-voip-tcph-zoom.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{91mm}
+\includegraphics[width=91mm]{figures/perf-barcode-voip-tcph-zoom.pdf}\vspace{1mm}
+\end{minipage}
+\begin{minipage}{91mm}~\end{minipage}
+}}
+\caption{VoIP: comparing the behaviour of standard TCP and TCP Hollywood when a segment is lost}
+\label{fig:voip-comparison}
+\end{figure*}
+
+Figure \ref{fig:voip-110-tcph} also demonstrates a sensitivity of TCP
+Hollywood to the accuracy of the TCP RTT estimate. The segment plots
+show a significant number of inconsistent retransmissions, marked by
+ticks on the outside of the plots. These are strongly correlated with
+latency spikes, and occur when short-term increases in delay push the
+delivery time estimate for the packets past their deadline, causing
+TCP Hollywood to send inconsistent retransmissions.
+We believe the spikes in latency due to queuing are causing the playout
+time of the packets to oscillate around their deadline. Sometimes this
+hurts TCP Hollywood, since inconsistent retransmissions are incorrectly
+sent; equally, though, it hurts standard TCP since there are times where
+inconsistent retransmissions are needed.  There is no significant impact 
+on the timely goodput.
+
+Finally, the results for Scenario III are shown in Figures
+\ref{fig:voip-60-tg}, \ref{fig:voip-60-tcp}, and \ref{fig:voip-60-tcph}.
+This is the primary scenario of interest: the combination of playout delay
+and network round trip time is such that standard retransmissions will not
+arrive in time to be played out, causing head-of-line blocking that will
+affect performance with standard TCP. In contrast, the use of inconsistent
+retransmissions and an alternate, message based, API that avoids head of
+line blocking should allow TCP Hollywood to perform well.
+
+Considering the timely goodput, Figure \ref{fig:voip-60-tg}, we see that
+both protocols are comparable when network conditions
+are good. However, with long-lived TCP cross traffic and MPEG DASH cross
+traffic, there are several regions where the timely goodput of standard
+TCP drops sharply below that of TCP Hollywood. It can readily be seen 
+that these correlate with the spikes in Message Latency seen in Figure
+\ref{fig:voip-60-tcp}. The corresponding spikes in latency for the TCP
+Hollywood traces, Figure \ref{fig:voip-60-tcph}, do not show the drop
+in timely goodput, but do correlate with inconsistent retransmissions.
+This is the behaviour we expect: standard TCP flows stall due to head
+of line blocking with waiting for retransmissions that arrive too late
+to be played out, while TCP Hollywood sends an inconsistent retransmission
+that arrives in time to be useful. The TCP Hollywood receiver sees a burst
+of packet loss, while the standard TCP receiver sees no loss, but a longer
+burst of packets being delivered late. TCP Hollywood achieves better
+\emph{timely} goodput, even though the amount of packet loss at the
+application is higher. 
+
+The behaviour of standard TCP and TCP Hollywood in the case of segment loss
+is explored in more detail in Figure \ref{fig:voip-comparison}.  The loss
+events are drawn from the Scenario III long-lived TCP plots, at around 108
+seconds for standard TCP and 84 seconds for TCP Hollywood.  
+Impact of removing head-of-line blocking is clear: fewer of the messages
+preceding the delivery of a retransmission miss their deadline.
+% FIXME: this should be expanded
+
+% \todo{Discuss inconsistent retransmissions once plotted}
+% \todo{Has it been checked that these are actual inconsistent retransmissions yet?}
+% 
+% plot the timely goodput, and playout, latency, and barcode plots for TCP
+% and TCP Hollywood for Scenario III. On average, TCP Hollywood achieves more
+% timely goodput than standard TCP.  \todo{expand this}
+% 
+% \todo{Add numbers to support this.}
+% 
+% \begin{table*}[h]
+%  \centering
+%  \normalsize
+%   \input{figures/perfeval-results.tex}
+%  \vspace{4mm}
+%   \caption{Performance evaluation results}
+% \label{tab:perfeval-results}
+% \end{table*}
+% FIXME: This table is not especially meaningful, since it's missing
+% confidence intervals. Need to re-run the simulations enough to get
+% meaningful error bar statistics. 
+
+
+In summary, this performance evaluation shows the validity of the
+analysis presented in Section \ref{sec:analysis}. TCP Hollywood is shown
+to improve timely goodput in cases where standard TCP retransmissions would
+arrive too late to be useful, converting a long duration playout stall into 
+a shorter packet loss event.
+

@@ -1,0 +1,314 @@
+Dear Stephen McQuistin, Colin Perkins and Marwan Fayed,
+
+We are delighted to inform you that the following paper has been accepted
+for presentation in IFIP Networking 2016 Conference:
+
+  Paper number: 1570235733
+  Title: TCP Hollywood: An Unordered, Time-Lined, TCP for Networked Multimedia Applications
+  Author(s): Stephen McQuistin, Colin Perkins and Marwan Fayed
+
+We received 200 submissions out of which 53 were accepted and further 5
+were conditionally accepted with shepherding.
+
+The reviews are included below and can also be found at
+http://edas.info/showPaper.php?m=1570235733, by logging in with your EDAS
+user name. Please finalize your camera-ready manuscript taking the reviews
+into account. You may be contacted if it was determined that the final
+manuscript didn't adequately address the reviewers' comments. The
+camera-ready submission is due by 1 April 2016. Note however that, in order
+for your paper to be included into the proceedings, at least one author
+must register for the conference on or before March 15, 2016 (see
+http://networking2016.univie.ac.at/registration/ for further details).
+
+General guidelines for the final manuscript:
+  - Follow the IEEE two-column page format
+  - The final manuscript is limited to 9 pages
+  - Do NOT put page numbers on the final manuscript 
+  - Include IFIP copyright notice on the first page
+  - Use IEEE PDF eXpress to check Xplore-compatibility
+  - Upload the final version to EDAS
+
+More detailed instructions on the above are available at
+http://networking2016.univie.ac.at/submissions/camera-ready-copy/
+
+Accepted and presented papers will be published in the IFIP Networking 2016
+Conference Conference Proceedings. They will submitted to IEEE Xplore® and
+IFIP Digital Library. 
+
+You are also requested to provide a survey on your results in one slide for
+the "One-Minute Madness Session" scheduled for May 17, 2016, 11:00am
+(details to follow, deadline: May 2, 2016). 
+
+We look forward to seeing you in Vienna, Austria, in May and listening to
+your presentation.
+
+Best regards,
+
+Joerg Ott, Christos Papadopoulos, Fabio Ricciato
+TPC Chairs, IFIP NETWORKING 2016 
+
+Peter Reichl
+General Chair, IFIP NETWORKING 2016
+
+http://networking2016.univie.ac.at/home/
+
++++++++++++++
+
+======= Review 1 =======
+
+*** Paper summary: Paper summary
+
+The authors motivate well why new features in transport protocols for RT
+traffic are needed and identify the particular requirements for a solution
+- which is than later on described in detail and evaluated through analysis
+and a real-world deployment.
+
+*** Strengths: What are the major reasons to accept the paper? [Be brief.]
+
+One important point is that TCP Hollywood is actually implemented and
+deployed for the evaluation.
+
+On the outside it looks like vanilla TCP, but in the insights it supports
+optimised retransmission and unordered delivery of segments to the
+application. 
+
+Another important point is that the design and implementation supports that
+(1) only client or only server use TCP Hollywood and still benefit, and (2)
+that it can be supported by a user-level library or a reimplementation of
+TCP in the kernel, which gives a lot of flexibility.
+
+*** Weaknesses: What are the most important reasons NOT to accept the paper? [Be brief.]
+
+Obviously, the authors are not the first one to identify that TCP is not
+well suited for RT traffic, but might be the only TP accepted by middle
+boxes. Thus, a major part of the contribution is at the engineering side
+(which should not only count negative).
+
+My main concern is that I am missing a critical analysis of the advantages
+of TVP Hollywood given todays packet loss rates in networks. For the
+deployment the authors delete "by hand" 5 % of the packages to demonstrate
+the advantages of TCP Hollywood.
+
+*** Detailed Comments: Please provide detailed comments that will be
+helpful to the TPC for assessing the paper. Also provide feedback to the
+authors.
+
+The paper is well written and easy to read!
+
+I like that the authors point out that there is a minor weakness regarded
+to middle boxes performing deep packet inspection and might not like the
+payload.
+
+*** Contributions: Rate the paper based on the degree of novelty,
+creativity, impact, and technical depth in the paper.
+Good (3)
+
+*** Presentation: Rate the readability / presentation of the paper.
+Very good (4)
+
+*** Familiarity: Rate your familiarity with the topic of the paper.
+Familiar (3)
+
+*** Recommendation: Your overall rating.
+Likely accept   (top 20% but not top 10%, significant contribution) (4)
+
+======= Review 2 =======
+
+*** Paper summary: Paper summary
+
+The paper introduces TCP Hollywood, a modified version of TCP that reduces
+head-of-line-blocking. The basic idea is that of re-packaging TCP packets.
+This way, there is an additional layer added to the protocol, circumventing
+problems persistent in TCP due to "ossification." TCP Hollywood allows for
+inconsistent retransmissions, because, especially regarding streaming
+content, it can be better to send new content than to retransmit content
+that is not useful anymore. There is a detailed analysis and initial
+evaluation of the proposed protocol.
+
+*** Strengths: What are the major reasons to accept the paper? [Be brief.]
+
+Overall, the paper is very well written and very well structured. A core
+strength is the extensive analysis and initial tests of the proposed
+algorithm. A lot of potential questions are already answered in the paper,
+e.g., that the overhead is negligible, that the worst case performance is
+not worse than TCP, and that the protocol is deployable at operators (at
+least in the UK).
+
+*** Weaknesses: What are the most important reasons NOT to accept the paper? [Be brief.]
+
+Reading through the related work, TCP Hollywood seems like yet another
+minimal improvement for TCP. QUIC, e.g., seems at least as likely to
+improve jitter or loss based connectivity issues.
+
+*** Detailed Comments: Please provide detailed comments that will be
+helpful to the TPC for assessing the paper. Also provide feedback to the
+authors.
+
+The authors motivate the requirement for their protocol carefully. The main
+issue that is tackled is head-of-line-blocking. It would be nice to see
+some real world test in future work. In comparison with other solutions,
+QUIC has the advantage of being pushed by a large company with lots of
+influence. Nevertheless, with an ossified transport-layer, the contribution
+of this paper of suggesting an additional layer and re-packaging seems very
+good and very well presented.
+
+*** Contributions: Rate the paper based on the degree of novelty,
+creativity, impact, and technical depth in the paper.
+Very good (4)
+
+*** Presentation: Rate the readability / presentation of the paper.
+Excellent (5)
+
+*** Familiarity: Rate your familiarity with the topic of the paper.
+Some knowledge (2)
+
+*** Recommendation: Your overall rating.
+Definite accept (top 10%, excellent paper) (5)
+
+======= Review 3 =======
+
+*** Paper summary: Paper summary
+
+This paper proposes a TCP extension, TCP Hollywood, targeting at multimedia
+applications. The proposal is motivated by two design goals: 1) deployable
+solution with performance improvement for real-time traffic; 2) to minimize
+latency caused by the head of line blocking and wasteful retransmissions.
+The sender and receiver of TCP Hollywood both require system level
+modifications, and a prototype in FreeBSD was implemented by the authors.
+Based on break-down analysis and initial tests, the authors illustrate the
+benefits of TCP Hollywood for latency-sensitive applications, with an
+advantage of ease of deployment.
+
+*** Strengths: What are the major reasons to accept the paper? [Be brief.]
+
+* The paper is well organized, and the idea of inconsistent retransmission
+  is suitable for the target scenario, i.e., multimedia traffic, based on
+the in depth analysis.
+
+*** Weaknesses: What are the most important reasons NOT to accept the paper? [Be brief.]
+
+* One questionable assumption made in Formula 1  (see below)
+
+* No discussion on the overhead of TCP Hollywood (see details below)
+
+* Rather weak evaluation for a system oriented paper
+
+*** Detailed Comments: Please provide detailed comments that will be
+helpful to the TPC for assessing the paper. Also provide feedback to the
+authors.
+
+In general, this paper introduces a feasible solution atop TCP for
+multimedia applications. The organization of the paper is very good. The
+analysis and implementation are of significant efforts. However, there are
+a few issues to concern.
+
+First, the analysis provides a theoretic overview on how TCP Hollywood may
+improve latency and head-of-line blocking through inconsistent
+retransmission, but there is a simplified assumption "we assume broadly
+symmetric network paths in this analysis." For general mobile networks,
+this is not the case. As one way delay can be asymmetric in most mobile
+access, this poses a concern for the usage of RTT/2 (in Formula 1),
+especially for interactive traffic. When RTT value grows, using RTT/2 will
+yield noticeable bias in the estimation. This assumption also affects the
+description in Table I as the conclusions are derived from Formula 1.
+
+Second, there is no discussion on the overhead TCP Hollywood may introduce,
+i.e., by adding the intermediary layer. Since operations of copying payload
+between buffers and reassembling TCP streams into messages can add extra
+latency, necessary discussions are needed but unfortunately almost missing
+from the paper.
+
+Third, the implementations are more toward engineering hacks rather than
+deployment-oriented solution, especially considering the pitfall it might
+become "yet another" TCP variant even if it is claimed to be deployable. In
+addition, the source code is not publicly accessible, which makes it hard
+to check the implementation to acquire more details. Simply based on the
+lines "The TCP modifications in the kernel impact approximately 300 lines
+of code, while the intermediary layer comprises 600 lines of user-space C
+code", it is hard to convince the networking community. For a proposal
+marked as "deployable on the public Internet", an idea (and with some novel
+hacks) is not enough.
+
+The evaluation is the weakest part of the paper. Although there are 12
+operators claimed to be covered, it appears to me more like a lab set up
+with end devices using different operator networks (which is fine for
+initial assessment).  And the results shown in Figure 6 only give us a hint
+that this proposal works (in a dummynet environment). 
+
+To match the claim, further work is needed, especially on system evaluation
+and comparison study, in order to convince the value of TCP Hollywood,
+i.e., on overhead (since the proposal artificially adds message-oriented
+delivery atop TCP) and its claimed performance benefits. For instance,
+comparison studies against UDP based QUIC and TCP based Minion are needed,
+in this regard.
+
+*** Contributions: Rate the paper based on the degree of novelty,
+creativity, impact, and technical depth in the paper.
+Good (3)
+
+*** Presentation: Rate the readability / presentation of the paper.
+Good (3)
+
+*** Familiarity: Rate your familiarity with the topic of the paper.
+Familiar (3)
+
+*** Recommendation: Your overall rating.
+Likely Reject   (top 50% but not in top 30%, needs more work) (2)
+
+======= Review 4 =======
+
+*** Paper summary: Paper summary
+
+The paper presents a modified TCP transmission and reception for real time
+media, known as TCP Hollywood. The work focuses on improving the playout
+performance by allowing inconsistent retransmissions to avoid the
+Head-of-line blocking. An architecture of the model is presented which
+introduces a intermediate layer for message oriented abstraction. The
+theoretical model is presented followed by implementation with the
+experiments conducted across UK. The results for playout time versus RTT
+are shown to validate TCP Hollywood.
+
+*** Strengths: What are the major reasons to accept the paper? [Be brief.]
+
+The paper investigates in detail about the Head-of-line blocking caused by
+TCP retransmissions, and proposes a real time model that can be deployed
+and implemented on the FreeBSD 10.1 kernel, that facilitates inconsistent
+retransmissions. The deployment of the proposed model improves the playout
+performance, specially in case of real time media where the delay bounds
+are strict. The architecture of the model is clearly described and the
+practical implementation validates the model.
+
+*** Weaknesses: What are the most important reasons NOT to accept the paper? [Be brief.]
+
+Figure 6 plots RTT versus playout time but the description of the results
+are not easy to follow why the playout time drops with increase in RTT. A
+little information is given on the complexity of the model, if the
+abstraction in the intermediate layer adds delay and queuing to the stream
+of bytes. It is not clear how  TCP Hollywood bi-passes the Middleboxes.
+
+*** Detailed Comments: Please provide detailed comments that will be
+helpful to the TPC for assessing the paper. Also provide feedback to the
+authors.
+
+The authors indicate message expiry as the retransmitted message that
+arrives too late or is dependent on the previous message. The
+implementation does not handle or discuss about the dependancy of the
+messages. In case of a video delivery, if the key frames are not
+retransmitted, it has an impact on the end user Quality of Experience.
+There is a separate buffer to hold per-message data. What is the impact of
+the separate buffer on the CPU overhead and delay?The maximum acceptable
+delay is denoted by Tmax, but the value is not pre defined.
+
+*** Contributions: Rate the paper based on the degree of novelty,
+creativity, impact, and technical depth in the paper.
+Very good (4)
+
+*** Presentation: Rate the readability / presentation of the paper.
+Good (3)
+
+*** Familiarity: Rate your familiarity with the topic of the paper.
+Familiar (3)
+
+*** Recommendation: Your overall rating.
+Likely accept   (top 20% but not top 10%, significant contribution) (4)
+

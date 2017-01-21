@@ -1,0 +1,117 @@
+\documentclass{letter}
+\usepackage{hyperref}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{color}
+\newcommand{\todo}[1]{\textcolor{red}{(to do: #1)}}
+\signature{\mbox{Stephen McQuistin, Colin Perkins, and Marwan Fayed}}
+\begin{document}
+
+\begin{letter}{~}
+
+\opening{Dear IFIP OTCS Editors:}
+
+We would like to thank you for your invitation to submit to the inaugural
+issue of the Open Transactions on Communication Systems journal. We are pleased
+to have been able to submit an substantially extended version of our IFIP Networking 2016 paper,
+``TCP Hollywood: An Unordered, Time-Lined, TCP for Networked Multimedia Applications''.
+Additions and expansions are summarised in the following list.
+
+\begin{itemize}
+
+  \item \textbf{A full appendix devoted to reproducibility.} The appendix
+  provides a justification for, as well as full description of, the evaluation
+  environment. Instructions are included to reproduce our tests and
+  measurements. TCP Hollywood sources have been made available online in
+  support, as have custom scripts and tools to generate results.
+
+  \item \textbf{Greatly expanded evaluations in Section V.} The conference draft
+  necessarily focussed on the design and justification for TCP Hollywood; and
+  associated analysis of expected benefits and behaviour. This came at the cost
+  of detailed and rigorous evaluations, and is rectified in Section V. In this
+  journal version we present results from our investigations so far. Four
+  distinct measures are used to evaluate Hollywood against standard TCP, with
+  observations recorded in Figures 7 through 16.
+
+  \item \textbf{Additional background in Section II.} Here we have
+  clarified the design goals, and used them as justification for a newly added
+  subsection to describe service requirements (II.B.).
+
+  \item \textbf{Edited the Related Works VII. section} to respond to reviewer comments regarding QUIC (see below); also to expand the discussion of TCP vs. UDP.
+
+  \item \textbf{Introduction and Conclusion sections} have been edited to
+  reflect the above changes.
+
+\end{itemize}
+
+
+%% =========================================
+
+The reviewer comments responded to in this extended version of our IFIP Networking 2016
+paper are outlined below, alongside a description of how this paper addresses them.
+
+\textbf{Review 1: ``\emph{My main concern is that I am missing a critical analysis of the advantages
+of TCP Hollywood given todays packet loss rates in networks.}''}
+
+As noted in Section V.A. ("Simulator Setup"), the simulation of a fixed, random packet
+loss rate is made difficult by the high variability of loss on the public Internet. The
+evaluations added in the paper make use of three classes of typical cross-traffic,
+resulting in a more realistic simulation.
+
+\textbf{Review 2: ``\emph{TCP Hollywood seems like yet another
+minimal improvement for TCP. QUIC, e.g., seems at least as likely to
+improve jitter or loss based connectivity issues.}''}
+
+%We view
+TCP Hollywood and QUIC are complementary, rather than competing, protocols.
+An updated Section VII (``Related Work") reflects this; it also discusses
+the relative trade-off of using TCP vs UDP. UDP allows for implementations entirely
+in user-space (greatly increasing deployability), whilst TCP maximises network reachability
+(UDP may be blocked by enterprise firewalls).
+
+Further, Section II ("Design Goals and API Requirements") has been updated to discuss the
+broader architectural principles behind TCP Hollywood: we believe that transport-layer
+evolution is made possible only by considering TCP and UDP as substrates. QUIC, in using
+UDP as a substrate, is an example of this approach in practice.
+
+\textbf{Review 3: ``\emph{the analysis provides a theoretic overview on how TCP Hollywood may
+improve latency and head-of-line blocking through inconsistent
+retransmission, but there is a simplified assumption "we assume broadly
+symmetric network paths in this analysis." For general mobile networks,
+this is not the case. As one way delay can be asymmetric in most mobile
+access, this poses a concern for the usage of RTT/2 (in Formula 1)}''}
+
+We agree that this is an issue with the analysis. The paper notes, in a footnote on page 5,
+that this assumption does not hold in ADSL and cellular networks. Further analysis is needed,
+but the broad conclusion of our analysis (i.e., that TCP Hollywood increases the usable
+region of retransmissions) holds.
+
+\textbf{Review 3: ``\emph{Rather weak evaluation for a system oriented paper}''}
+
+Section V (``Performance Evaluations") expands on the analysis and deployability measurements
+discussed in the IFIP Networking 2016 paper.
+
+\textbf{Review 3: ``\emph{the source code is not publicly accessible, which makes it hard
+to check the implementation to acquire more details.}''}
+
+As noted in the Appendix (``Reproducibility"), the source code for the paper is publicly
+accessible, including the kernel modifications and intermediary layer. The appendix also
+gives detailed instructions on how this code fits together, and can be used to reproduce
+the paper.
+
+\textbf{Review 4: ``\emph{There is a separate buffer to hold per-message data. What is the impact of
+the separate buffer on the CPU overhead and delay?}''}
+
+While evaluations have not been carried out to determine the CPU impact of
+TCP Hollywood, Section III (``Architecture \& Design") discusses the implementation
+details (e.g., additional copies) that are likely to contribute to increased CPU overhead.
+Based on these details, and anecdotal evidence from running the performance evaluations,
+we do not believe that the CPU overhead of our modifications is significant.
+
+Future work includes quantitive evaluations to measure CPU overhead and delay.
+
+We are grateful to the reviewers for their comments. We are also grateful to the journal editors for the opportunity to further develop our work, as well as the criteria by which to improve and expand this work.
+
+\closing{Best regards,}
+
+\end{letter}
+\end{document}

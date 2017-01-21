@@ -1,0 +1,103 @@
+% !TEX root = ../utltcp-paper.tex
+
+Real-time networked multimedia applications have long contributed to
+Internet traffic. This can take the form of telephony \cite{RFC3261},
+video conferencing \cite{jennings:2013:webrtc}, live or on-demand TV
+and movies \cite{cha:2008:watching-tv,stockhammer:2011:dash}, or
+user-generated video. These applications, and the traffic they generate,
+are rapidly increasing in popularity, and now
+comprise the majority of Internet traffic \cite{cisco:2013:vni-forecast}.
+
+The nature of such real-time traffic is that it prefers predictable and bounded
+latency to strict reliability, since data that arrives too late is as
+bad as data that does not arrive at all. This suggests that data should
+be sent in packets that can be independently decoded
+\cite{clark:1990:architecture}, to allow them to be processed irrespective
+of the loss or delay of other packets. However, the requirement for efficient media
+compression leads to interdependence between packet contents and codecs
+that operate across multiple frames.  When coupled with
+challenging network environments, such as mobile wireless, that have
+unreliable delivery and unpredictable latency, the requirements for
+effective media transport become difficult to satisfy.
+
+Applications access the network via the transport layer. The transport
+protocol should provide services to meet the application demands,
+abstracting away details of the transport process, and delivering data with an
+appropriate degree of reliability and timeliness. For real-time networked
+multimedia, the transport should be trusted to minimize transport-induced
+delay, and should respect (partial) reliability semantics pertaining to
+media importance, deadlines, and dependencies.
+
+Message-oriented transports, such as SCTP \cite{rfc:4960} and DCCP
+\cite{rfc:4340}, ought to be suitable building blocks, but their deployment
+is restricted by NATs, firewalls, and other middleboxes
+\cite{hatonen:2010:gateway}. This leaves real-time applications to use
+UDP or TCP, neither of which is well-suited to their needs. UDP
+contributes minimal latency, making it the recommended transport to meet the
+strict latency bounds of real-time applications
+\cite{draft-ietf-rtcweb-rtp-usage}, but provides limited support to
+applications, and is commonly blocked by enterprise firewalls. TCP prefers
+reliability to timeliness, and its congestion control tends to drive up
+queueing delay, but is often the only transport that can pass through
+middleboxes on the path. Accordingly, and despite its problems,
+TCP is rapidly becoming the de facto transport for multimedia traffic.
+
+In this paper, we engineer TCP Hollywood in response to these trends.
+TCP Hollywood is an unordered and time-lined transport protocol, that is wire
+compatible with standard TCP, but eliminates two sources of transport-induced
+latency, and provides reliability semantics that better suit real-time
+multimedia applications.  Specifically, TCP Hollywood: 1) removes
+head-of-line blocking at the receiver and delivers received data to the
+application immediately, irrespective of ordering; and 2) relaxes
+reliability to respect time lines provided by the application, so only
+data that will arrive in time is retransmitted, otherwise retransmissions
+carry new data. The combination of both design elements reduces latency
+and introduces message-oriented semantics, allowing TCP Hollywood to
+express inter-dependencies between messages. Crucially, TCP Hollywood is
+wire-compatible with TCP, and incrementally deployable on the public
+Internet.
+
+Our implementation consists of an intermediate logic layer that sits
+between the application and the kernel. Extensions in the TCP stack
+facilitate out-of-order delivery, and can be enabled or disabled via
+socket options. Messages are delineated in the logic layer using timing
+and dependency information from the application, and COBS-encoded
+\cite{chesire:1997:COBS} to survive re-segmentation that may occur in the
+network. We introduce the concept of inconsistent retransmissions: if the
+round-trip time (RTT) estimator indicates that a message will arrive too late to be useful,
+or if a message depends on a previous unsuccessfully transmitted message,
+then TCP Hollywood can exploit re-transmission slots to send new data and
+avoid retransmitting useless data. The semantics of TCP are maintained by
+preserving the sequence numbers in retransmitted segments, whether
+inconsistent or not.
+We develop an analytical framework to model the value of a retransmission
+against the buffering and processing time of data at the receiver-side.
+Our analysis reveals a wide range of RTT values where standard TCP
+retransmissions will arrive too late to be useful. We use this model to
+validate TCP Hollywood, and show that it handles retransmissions correctly.
+
+Our contributions are as follows.  After reviewing the rationale and
+requirements in Section \ref{sec:background}, we design a TCP-compatible
+architecture and application programming interface (API) that eliminates
+transport related, but not congestion control related, delay from TCP in
+Section \ref{sec:design} (this can be used with any of the existing
+proposals to reduce congestion control related delay, such as active
+queue management \cite{nichols:2012:codel,khademi:2014:new-aqm} or
+delay-based congestion control \cite{jin:2004:fast-tcp,brakmo:1994:tcp-vegas}).
+We develop an analytic framework in Section
+\ref{sec:analysis} to determine the value and content of retransmitted
+data. Section \ref{sec:perfeval} describes performance evaluations based on 
+a simulated VoIP application, with typical cross-traffic classes. 
+Experiments to demonstrate the ease of deployment of TCP Hollywood are
+discussed in Section \ref{sec:deployability}. Related work and concluding
+remarks are provided in Sections \ref{sec:related} and
+\ref{sec:conclusions}, respectively.
+
+This paper is an extended version of \cite{mcquistin:2016:tcp-hollywood}.
+It revises and extends the material in that paper, extending the discussion 
+of service requirements and APIs for real-time applications in Section
+\ref{sec:background}, adding a performance evaluation in Section
+\ref{sec:perfeval}, and adding an appendix discussing reproducibility of
+our results.
+
+%==================================================================================================

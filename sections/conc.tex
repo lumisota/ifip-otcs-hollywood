@@ -1,0 +1,38 @@
+% !TEX root = ../utltcp-paper.tex
+
+In this paper we described the rationale for the use new transport services
+for real-time application in the Internet, then presented TCP Hollywood, a 
+modified TCP that is designed to address these needs.
+Our analysis shows that our suggested modifications to TCP are beneficial
+to applications with tight latency bounds, such as voice telephony. This
+is validated through performance evaluation under network emulation. The
+appendix to this paper discusses reproducibility of these results.
+We have further shown that by limiting the wire-visible modifications, 
+TCP Hollywood can maintain TCP's widespread ease of deployment.
+
+Future work will include performance evaluation on the public Internet, to 
+show that the gains we show through analysis and simulation are achievable
+in practice. 
+Beyond this, we are exploring enhancements to TCP Hollywood that may
+further improve performance. For example, dependency information is
+currently used to determine when \textit{not} to send a message, but it may
+be a cause \textit{to} send a message, even if that message may not arrive
+in time to be played out, to allow future messages to be processed. Broader
+enhancements, such as integration with SACK or MP-TCP, should also be
+studied.
+
+TCP Hollywood exists within a transport-layer protocol design space that
+is constrained by ossification. We have TCP and UDP as substrates, with
+little room for modification. Substrate selection presents trade-offs:
+TCP gives a wider deployment story than UDP, but depending on the desired
+functionality, receiver-side kernel modifications can be needed.
+These trade-offs may shift over time, as the network responds to large
+deployments of substrate-based transports. For example, QUIC is seeing
+non-trivial deployment by being included within Google's web browser, and
+may result in fewer firewalls blocking UDP. This is a long-term concern,
+however, and in the near future we believe that protocols like TCP
+Hollywood offer important advantages relating to middlebox traversal,
+that will make them easy and valuable to deploy. Our initial results
+show TCP Hollywood is deployable on \emph{all} major fixed and mobile
+operators in the UK, offering compelling latency advantages.
+

@@ -1,0 +1,105 @@
+% !TEX root = ../utltcp-paper.tex
+
+% The design of TCP Hollywood makes only one wire-visible modification to TCP:
+% inconsistent retransmissions. Middleboxes along the path may see multiple
+%segments with the same TCP sequence number, but with different payloads.
+
+% We investigate the feasibility of deploying TCP Hollywood, using results
+% from initial experiments with a FreeBSD implementation on
+% residential and mobile networks in the UK.
+%
+% \todo{Remove reference to FreeBSD? Confuses the point?}
+
+In an ossified Internet, TCP Hollywood must survive middlebox behaviours if it
+is to be deployable. In this section we present positive results from a
+preliminary investigation of TCP Hollyood between a residential and multiple
+mobile networks in the UK.
+
+TCP Hollywood is designed to be entirely compatible with TCP. The only
+on-the-wire visible difference between a TCP Hollywood flow and a standard TCP
+flow appears within the payload data carried by inconsistent retransmissions.
+Recall from Section~\ref{subsec:sender} that inconsistent retransmissions carry
+new payload data inside of segments with previously transmitted sequence
+numbers. This modification is invisible to receivers and middleboxes that only
+process TCP/IP headers, but is visible to middleboxes that use deep packet
+inspection if they compare the contents of a retransmitted packet with the
+original data. Depending on the configuration such behaviour may disrupt the
+connection. For example, a firewall may interpret inconsistent retransmissions
+as belonging to a man-on-the-side attack, and reset the connection.
+
+We conducted experiments with a live deployment of TCP Hollywood to obtain an
+initial assessment on whether such middleboxes exist, and what impact they have.
+A TCP Hollywood server was setup on a public IP address. The server was
+configured to always send inconsistent retransmissions in lieu of the original
+data, so that all retransmissions contained new data with the same sequence
+numbers. Listen ports were set as 80, 4001, and 5001. Port 80 is used by web
+traffic, and can be expected to be affected by middleboxes such as
+``transparent'' caches and firewalls. We expect ports 4001 and 5001 to be less
+likely to be subject to interference by middleboxes, since they are not used by
+popular applications.
+
+% Port 5001 is used for control, i.e. with no induced loss.
+
+% Clients were deployed across a number of access networks, operated by different
+% service providers. Each
+Clients connected to the server, and received data. All
+incoming segments to the client host were recorded by \texttt{tcpdump}, then
+filtered by \texttt{iptables} to uniformly drop 5\% of segments before reaching
+the TCP stack for traffic from ports 80 and 4001. Traffic from port 5001 was
+unaffected.\footnote{Given that our goal is to test the ability to deploy TCP
+Hollywood, rather than performance, we are only concerned with creating
+sufficient loss to trigger inconsistent retransmissions. A high
+\emph{un-correlated} drop rate enables TCP to survive where it would fail
+against correlated drops. The ensuing reduction in throughput translates to
+reduced loss due to congestion. Thus the client is more likely to see both the
+original transmission and its retransmission.} Each loss induced at the client
+triggered an inconsistent retransmission from the server.
+%The random drop ensured that the client TCP stack experienced loss, and
+%triggered the retransmission of the lost segment from the server.
+Remaining segments were passed up the stack to the client application, as
+normal. Data received by the client application was recorded, and compared
+against \texttt{tcpdump} logs from the server to identify the dropped
+segments, and to compare the payload data in the dropped segments with
+that sent in the original packet and in the inconsistent retransmission.
+This allows us to see what segments have been dropped, and to confirm that
+both the original and retransmission cross the path between client and
+server, and whether the inconsistent retransmission was delivered.
+
+The evaluation was conducted using clients in 14 different locations in the UK,
+connecting to a server located at the University of Glasgow. The clients
+connected via eight different fixed-line residential ISPs (Andrews \& Arnold,
+BT, Demon, EE, Eclipse, Sky, TalkTalk, and Virgin), and four mobile operators
+(EE, O2, Three, and Vodafone).  All of the fixed-line residential ISPs
+successfully delivered the inconsistent retransmissions. Among the four mobile
+operators, only one delivered inconsistent retransmissions. The three remaining
+mobile operators delivered the original segments instead, yet the server saw no
+corresponding segment loss. This observed behaviour is consistent with a
+transparent split-connection TCP performance enhancing proxy cache that
+intercepts and responds to ACKs from the client on behalf of the server. This
+caching behaviour was observed on ports 80 and 4001 for two of the three
+providers, while the other provider appeared to operate a cache on port 80 only.
+
+Crucially, TCP Hollywood {\em continued to operate irrespective of middlebox
+presence} in the network. At no time did connections suffer a reset, nor did the
+use of the TCP Hollywood extensions affect connectivity or performance.
+Middlebox manipulations such as caching are designed to be transparent, leaving
+the client to believe it is interacting with a standard TCP server. Recall from
+Section~\ref{subsec:partialdep} that TCP Hollywood is designed for partial
+deployment. This experiment provides evidence that TCP Hollywood continues to
+deliver messages and eliminate head-of-line blocking, even when inconsistent
+retransmissions are absent. In the worst-case, performance is the same as TCP
+without our extensions.
+
+The set of networks tested is by no means exhaustive. Further, and larger scale,
+evaluation is needed to build evidence that inconsistent retransmissions are
+deployable. Previous studies provide room for optimism, however. Honda et al.
+\cite{honda:2011:extend-tcp} investigated deployment of TCP modifications with
+regards to middlebox interaction, from 142 networks in 24 countries, in early
+2011, including inconsistent retransmission measurements taken over a large
+number of paths, with path diversity. Their observations mirror ours: the
+majority of paths deliver inconsistent retransmissions as expected, while a
+small number deliver the original instead. They also observed connection resets
+on one path, representing less than 1\% of paths evaluated.
+
+%Some discussion about (hypothetical, unseen)
+%middleboxes that might break the protocol? And checksumming/DTLS as a solution}
